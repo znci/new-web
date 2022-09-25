@@ -1,0 +1,16 @@
+
+footer {
+	background-color: var(--backgroundlight);
+	padding: 30px;
+	font-size: 1.2rem;
+	height: 200px;
+	padding-bottom: 60px;
+	display: flex;
+	align-items: center;
+}
+footer img {
+	margin-right: 10px;
+	width: 48px;
+	height: 48px;
+	border-radius: 10px;
+}

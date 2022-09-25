@@ -1,0 +1,63 @@
+
+section.members {
+	padding: 30px;
+}
+section.members .members {
+	padding: 20px;
+	width: 100%;
+	gap: 20px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(250px,500px));
+	justify-content: space-evenly;
+}
+.member-container {
+	background: var(--backgroundlight);
+	border-radius: 30px;
+	width: 500px;
+	height: 300px;
+	padding: 10px;
+	border: 5px var(--backgroundlight) solid;
+}
+.member-container:hover {
+	border-color: var(--container);
+}
+.member-container .header {
+	margin: 0px 20px 20px 20px;
+	display: flex;
+	position: relative;
+	font-size: 2rem;
+	font-family: "Source Sans Pro";
+	max-height: 100px;
+	width: 100%;
+	gap: 20px;
+}
+.member-container .desc {
+	display: flex;
+}
+.member-container .header .badge {
+	position: absolute;
+	left: 120px;
+	top: 30px;
+}
+.member-container .header .badges {
+	height: 48px;
+	position: absolute;
+	left: 120px;
+	top: 60px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.member-container .header .badges i {
+	font-size: 1.2rem;
+	margin: 5px;
+}
+.member-container .header h3 {
+	font-weight: 100;
+	display: inline-flex;
+	height: 48px;
+}
+.member-container img {
+	border-radius: 20px;
+	width: 98px;
+	height: 98px;
+}
