@@ -208,6 +208,35 @@ znci.updateUserTheme = () => {
   console.log("Loaded user theme updating");
 }
 
+znci.updateNews = () => {
+  let i = 0;
+  fetch("http://185.225.232.4:2052/api/znci/news").then(res => res.json())
+  .then(json => {
+    for (const key in json) {
+      i++;
+      if(i > 3) return;
+      const j = json[key];
+
+      document.querySelector(".news").innerHTML += `
+      <div class="news-container">
+      <div class="news-body">
+        <div class="news-title">
+          ${j.title}
+        </div>
+        <div class="news-content">
+          ${j.content}
+        </div>
+        <div class="news-footer">
+          <div class="marker"></div>
+          Posted by <strong>${j.poster}</strong> &bull; ${new Date(j.time * 1000).toLocaleDateString()}
+        </div>
+      </div>
+    </div>
+      `
+    }
+  })
+}
+
 // load
 
 window.onload = () => {
@@ -217,4 +246,5 @@ window.onload = () => {
   znci.footerFunction();
   znci.loadMembers();
   znci.updateUserTheme();
+  znci.updateNews();
 }
