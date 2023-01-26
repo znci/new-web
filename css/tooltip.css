@@ -1,43 +1,29 @@
 @import url("./main.css");
 
-:root {
-	--backgroundlight: #2e2b47;
-}
 .tooltip {
     position:relative;
 }
-@keyframes slidein {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-        background: var(--bg-gradient);
-    }
-}
 .tooltip .ttp-text {
-    animation: slidein 0.3s linear;
-    animation-fill-mode: forwards;
     position:absolute;
     font-size: 18px;
     top:50%;
     transform:translateY(-50%);
     left:100%;
     margin-left:15px;
-    width:250px;
+    width:350px;
     padding:10px;
     border-radius:10px;
-    background:var(--backgroundlight);
+    background:var(--self-color-ex-light);
     z-index: 100;
     color: #fff;
     display:none;
+    border-bottom: 5px solid var(--self-color);
 }
 .tooltip:hover .ttp-text {
     display:grid;
 }
 .tooltip:after {
-    content: "";
-    animation: slidein 0.3s linear;
+    content: " ";
     position:absolute;
     
     /* position tooltip correctly */
@@ -49,11 +35,18 @@
     transform:translateY(-50%);
    
     /* the arrow */
-    border:10px solid var(--backgroundlight);
-    border-color: transparent var(--backgroundlight) transparent transparent;
+    border:10px solid var(--self-color-ex-light);
+    border-color: transparent var(--self-color-ex-light) transparent transparent;
     z-index: 100;
     display:none;
 }
 .tooltip:hover .ttp-text, .tooltip:hover:after {
     display:block;
+}
+.tooltip i {
+    background-color: var(--self-color);
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 1.25rem;
+    color: var(--self-color-light);
 }

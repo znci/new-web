@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url("./member.css");
+@import url("./tooltip.css");
+@import url("./welcome.css");
+@import url("./navbar.css");
+@import url("./ugh.css");
+
+@font-face {
+	font-family: 'Google Sans';
+	src: url(../fonts/GoogleSans-Regular.woff2) format('woff2');
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	scroll-behavior: smooth;
+	box-sizing: border-box;
+}
+:root {
+	--base-hue: 200deg;
+	--background: hsl(var(--base-hue), 10%, 10%);
+	--backgroundlight: hsl(var(--base-hue), 10%, 20%);
+	--header-gradient: hsl(var(--base-hue), 20%, 20%);
+	--select: hsl(var(--base-hue), 50%, 50%);
+	--navbar: hsl(var(--base-hue), 15%, 15%);
+	--navbar-fixed: hsl(var(--base-hue), 40%, 40%);
+	--content-background: hsl(var(--base-hue), 10%, 15%);
+	--content-background-light: hsl(var(--base-hue), 10%, 22%);
+	--self-color: hsl(var(--base-hue), 30%, 30%);
+	--self-color-light: hsl(var(--base-hue), 16%, 45%);
+	--self-color-ex-light: hsl(var(--base-hue), 25%, 45%);
+	--def-font: "Google Sans";
+	--def-font-size: 14px;
+	--exo: 'Exo 2', sans-serif;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-family: var(--exo);
+	font-weight: 700;
+}
+html, body {
+	background-color: var(--background);
+	color: #fff;
+	font-family: var(--def-font);
+	font-size: var(--def-fontsize);
+}
+a, i{
+	color: #fff;
+	text-decoration: none;
+}
+::selection {
+	color: #fff;
+	background-color: var(--select);
+}
+hr {
+	border: 2px var(--backgroundlight) solid;
+}
+button {
+	background-color: var(--bg-gradient);
+	color: var(--button-text);
+	font-size: calc(var(--def-fontsize) + 4px);
+	padding: 0.75rem 2rem;
+	border-radius: 20px;
+	font-family: var(--def-font);
+	border: 1px var(--main) solid;
+	font-weight: 700;
+	cursor: pointer;
+	margin-top: 10px;
+	transition: background-color 0.3s linear;
+}
+button:hover {
+	background-color: var(--secondary);
+}

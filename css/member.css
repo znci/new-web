@@ -1,0 +1,48 @@
+
+.team {
+	padding: 30px;
+	width: 1200px;
+	height: fit-content;
+}
+.members {
+	width: 100%;
+	gap: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-content: space-evenly;
+}
+.card.member {
+	height: 300px;
+	border-color: var(--select);
+	position: relative;
+}
+.card.member .card-title {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+.card.member .card-title .displayname, .card.member .card-title .badge {
+	display: block;
+	height: fit-content;
+}
+.card.member img {
+	border-radius: 50%;
+	width: 48px;
+	height: 48px;
+}
+.tooltip i {
+	font-size: 2rem;
+	margin: 5px;
+	border-radius: 10px;
+	font-size: 1.5rem;
+	width: 32px;
+	height: 32px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+.card .bottom-content {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+}
