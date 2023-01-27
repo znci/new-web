@@ -136,10 +136,10 @@ znci.memberList = [
 	{
 		"name": "BlockArchitech",
 		"socials": {
-      "discord": "gibbiemonster#6242",
       "github": "BlockArchitech",
-      "email": "hello@blockarchitech.com",
+      "email": "hello@blockarchitech.com or block@znci.dev",
       "website": "blockarchitech.com",
+      "gitlab": "blockarchitech"
     },
 		"pfp": "https://github.com/blockarchitech.png",
 		"country": {
