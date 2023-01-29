@@ -90,7 +90,6 @@ znci.memberList = [
 		"socials": {
 			"github": "zNotChill",
 			"discord": "chxll#3424",
-			"twitch": "hpqyy",
 			"gitlab": "zNotChill",
 			"email": "znotchill@znci.dev",
 		},
@@ -106,7 +105,7 @@ znci.memberList = [
 		"name": "Cerq",
 		"socials": {
 			"github": "Cerquaas",
-			"discord": "cerq 🎄#0001",
+			"discord": "cerq#0001",
 			"email": "cerq@znci.dev",
 		},
 		"country": {
@@ -137,7 +136,7 @@ znci.memberList = [
 		"name": "BlockArchitech",
 		"socials": {
       "github": "BlockArchitech",
-      "email": "hello@blockarchitech.com or block@znci.dev",
+      "email": "block@znci.dev",
       "website": "blockarchitech.com",
       "gitlab": "blockarchitech"
     },
