@@ -11,6 +11,17 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+	<!-- JS -->
+
+	<script src="./js/footer.js"></script>
+	<script src="./js/index.js"></script>
+	<script src="./js/navbar.js"></script>
+	<script src="./js/themes.js"></script>
+
+	<!-- CSS -->
+
+	<link rel="stylesheet" href="/css/footer.css">
 </head>
 <body>
 	<div class="navbar-top not-fixed">
@@ -41,7 +52,7 @@
 					<h2>Projects</h2>
 							<div class="project-container">
 								<div class="project-poster">
-									<a href="https://github.com/znci/azalea" style="background-image: url(https://raw.githubusercontent.com/znci/azalea/main/azalea.svg)"></a>
+									<a href="https://github.com/znci/azalea" style="background-image: url(./img/azalea.svg)"></a>
 								</div>
 								<div class="project-body">
 									<div class="project-title">
@@ -49,6 +60,11 @@
 									</div>
 									<div class="project-content">
 										Azalea is a CSS and soon-to-be JS framework, with features such as alerts, badges, buttons, cards, inputs, tooltips, etc.
+										<div class="tags">
+											<div class="tag tag-green">
+												public
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -63,6 +79,11 @@
 									</div>
 									<div class="project-content">
 										znci QR is a QR code generator that currently supports links.
+										<div class="tags">
+											<div class="tag tag-green">
+												public
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -76,21 +97,12 @@
 										Web
 									</div>
 									<div class="project-content">
-										A simple website creator. Not public yet.
-									</div>
-								</div>
-							</div>
-
-							<div class="project-container">
-								<div class="project-poster">
-									<a href="https://github.com/znci/BetterPS" style="background-image: url(./img/placeholder.svg)"></a>
-								</div>
-								<div class="project-body">
-									<div class="project-title">
-										BetterPS
-									</div>
-									<div class="project-content">
-										A chrome extension for making the PlayerServers website better, with an inbuilt console terminal and other features.
+										A simple website creator.
+										<div class="tags">
+											<div class="tag tag-red">
+												private
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -98,13 +110,50 @@
 
 
 				<div class="side">
-					<div class="news" id="news">
-						<h2>News</h2>
+					<div class="projects">
+						<div class="project-container">
+							<div class="project-poster">
+								<a href="https://github.com/znci/paint" style="background-image: url(https://res.cloudinary.com/znci/image/upload/v1675111503/znci-paint-logo-light-short_ht2khq.svg)"></a>
+							</div>
+							<div class="project-body">
+								<div class="project-title">
+									Paint
+								</div>
+								<div class="project-content">
+									A free drawing app with PNG, SVG and JPG support. 
+									<div class="tags">
+										<div class="tag tag-red">
+											private
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="project-container">
+							<div class="project-poster">
+								<a href="https://github.com/znci/BetterPS" style="background-image: url(./img/placeholder.svg)"></a>
+							</div>
+							<div class="project-body">
+								<div class="project-title">
+									BetterPS
+								</div>
+								<div class="project-content">
+									A chrome extension for making the PlayerServers website better, with an inbuilt console terminal and other features.
+									<div class="tags">
+										<div class="tag tag-green">
+											public
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<div class="page-footer footer"></div>
 </body>
-	<script src="./js/index.js"></script>
 </html>

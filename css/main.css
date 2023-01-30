@@ -73,3 +73,23 @@ button {
 button:hover {
 	background-color: var(--secondary);
 }
+
+.tags {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.tag {
+	padding: 4px;
+	border-radius: 10px;
+	margin: 5px;
+	width: 75px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.tag.tag-green {
+	background-color: hsla(113, 100%, 30%, 1);
+}
+.tag.tag-red {
+	background-color: hsla(0, 100%, 40%, 1);
+}

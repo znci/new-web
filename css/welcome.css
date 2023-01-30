@@ -72,7 +72,11 @@ html {
 	border-radius: 3px;
 }
 .home-cover .content .projects .project-container .project-poster a {
-	background-size: cover;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: var(--content-background);
+	border-radius: 25px;
 	display: block;
 	width: 80px;
 	height: 80px;
