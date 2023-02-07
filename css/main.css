@@ -25,12 +25,12 @@
 :root {
 	--base-hue: 200deg;
 	--background: hsl(var(--base-hue), 10%, 10%);
-	--backgroundlight: hsl(var(--base-hue), 10%, 20%);
+	--backgroundlight: hsl(var(--base-hue), 10%, 10%);
 	--header-gradient: hsl(var(--base-hue), 20%, 20%);
-	--select: hsl(var(--base-hue), 50%, 50%);
+	--select: hsl(var(--base-hue), 15%, 15%);
 	--navbar: hsl(var(--base-hue), 15%, 15%);
 	--navbar-fixed: hsl(var(--base-hue), 40%, 40%);
-	--content-background: hsl(var(--base-hue), 10%, 15%);
+	--content-background: hsl(var(--base-hue), 10%, 8%);
 	--content-background-light: hsl(var(--base-hue), 10%, 22%);
 	--self-color: hsl(var(--base-hue), 30%, 30%);
 	--self-color-light: hsl(var(--base-hue), 16%, 45%);

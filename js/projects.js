@@ -60,7 +60,7 @@ const projectList = [
 	  	"about": "A chrome extension for making the PlayerServers website better, with an inbuilt console terminal and other features."
 	},
 	{
-	  	"name": "MusicBridge",
+	  	"name": "musicbridge",
 	  	"tags": [
 			{
 				"tag": "public",
