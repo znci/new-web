@@ -13,10 +13,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 	<!-- JS -->
-
-	<script src="./js/footer.js"></script>
 	<script src="./js/index.js"></script>
-	<script src="./js/navbar.js"></script>
 	<script src="./js/themes.js"></script>
 
 	<!-- CSS -->
@@ -24,136 +21,35 @@
 	<link rel="stylesheet" href="/css/footer.css">
 </head>
 <body>
-	<div class="navbar-top not-fixed">
-		<div class="main-content">
-			<div class="branding">
-				<img style="border-radius: 10px; width: 48px" src="https://avatars.githubusercontent.com/u/89603476?s=200&v=4" alt="">
-			</div>
-			<div class="items">
-				<ul>
-					<li>
-						<a href="./#projects">Projects</a>
-					</li>
-					<li>
-						<a href="./team.html">Team</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<!-- <div class="side-content">
-			<div class="round-button">
-			</div>
-		</div> -->
-	</div>
 	<div class="home-cover">
 		<div class="content">
 			<div class="center-content">
-				<div class="projects" id="projects">
-					<h2>Projects</h2>
-							<div class="project-container">
-								<div class="project-poster">
-									<a href="https://github.com/znci/azalea" style="background-image: url(./img/azalea.svg)"></a>
-								</div>
-								<div class="project-body">
-									<div class="project-title">
-										Azalea CSS
-									</div>
-									<div class="project-content">
-										Azalea is a CSS and soon-to-be JS framework, with features such as alerts, badges, buttons, cards, inputs, tooltips, etc.
-										<div class="tags">
-											<div class="tag tag-green">
-												public
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							
-							<div class="project-container">
-								<div class="project-poster">
-									<a href="https://github.com/znci/qr" style="background-image: url(./img/qr.svg)"></a>
-								</div>
-								<div class="project-body">
-									<div class="project-title">
-										QR Generator
-									</div>
-									<div class="project-content">
-										znci QR is a QR code generator that currently supports links.
-										<div class="tags">
-											<div class="tag tag-green">
-												public
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="project-container">
-								<div class="project-poster">
-									<a href="https://github.com/znci/web" style="background-image: url(./img/placeholder.svg)"></a>
-								</div>
-								<div class="project-body">
-									<div class="project-title">
-										Web
-									</div>
-									<div class="project-content">
-										A simple website creator.
-										<div class="tags">
-											<div class="tag tag-red">
-												private
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+				<div class="title">
+					<img class="wave-emoji" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f44b.svg" alt="">
+					<h1>Welcome to znci!</h1>
 				</div>
-
-
-				<div class="side">
-					<div class="projects">
-						<div class="project-container">
-							<div class="project-poster">
-								<a href="https://github.com/znci/paint" style="background-image: url(https://res.cloudinary.com/znci/image/upload/v1675111503/znci-paint-logo-light-short_ht2khq.svg)"></a>
-							</div>
-							<div class="project-body">
-								<div class="project-title">
-									Paint
-								</div>
-								<div class="project-content">
-									A free drawing app with PNG, SVG and JPG support. 
-									<div class="tags">
-										<div class="tag tag-green">
-											public
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="project-container">
-							<div class="project-poster">
-								<a href="https://github.com/znci/BetterPS" style="background-image: url(./img/placeholder.svg)"></a>
-							</div>
-							<div class="project-body">
-								<div class="project-title">
-									BetterPS
-								</div>
-								<div class="project-content">
-									A chrome extension for making the PlayerServers website better, with an inbuilt console terminal and other features.
-									<div class="tags">
-										<div class="tag tag-green">
-											public
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+				<div class="description">
+					<p>znci is a team of developers who want to <br> make the web just a little bit better.</p>
+					<div class="button-row">
+						<a href="#projects" class="button">Projects</a>
+						<a href="#team" class="button">Meet the Team</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
+	<section class="section" id="projects">
+		<h1 style="font-size: 2.5rem; text-align: center; margin: 10px; font-weight: 700;">Projects</h1>
+		<div class="project-list"></div>
+	</section>
+	<section class="section" id="team">
+		<h1 style="font-size: 2.5rem; text-align: center; margin: 10px; font-weight: 700;">Team</h1>
+		<div id="members_list"></div>
+	</section>
+
 	<div class="page-footer footer"></div>
 </body>
+	<script src="./js/footer.js"></script>
+	<script src="./js/loaders.js"></script>
 </html>
