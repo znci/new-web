@@ -1,6 +1,6 @@
 
 function setTheme(deg) {
-	document.documentElement.style.setProperty("--base-hue", `${deg}deg`)
+	document.documentElement.style.setProperty("--hue", `${deg}deg`)
 	localStorage.setItem('user-theme', `${deg}deg`)
 	console.log("Loaded user themes");
 }
@@ -10,6 +10,6 @@ document.onload = () => {
 		localStorage.setItem('user-theme', '200deg')
 	}
 	
-	document.documentElement.style.setProperty("--base-hue", `${localStorage.getItem("user-theme")}`)  
+	document.documentElement.style.setProperty("--hue", `${localStorage.getItem("user-theme")}`)  
 	console.log("Loaded user theme updating");
 }

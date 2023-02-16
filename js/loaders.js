@@ -162,7 +162,7 @@ window.onload = () => {
 			if(b === "website") isrc = `<i class="fa-solid fa-globe fa-fw"></i>`
 			if(b === "email") isrc = `<i class="fa-solid fa-envelope fa-fw"></i>`
 			badgeNum ++;
-			badges += `<span class="tooltip">${isrc}<span class="ttp-text">${isrc} ${socials[b]}</span></span>`
+			badges += `<span class="tooltip">${isrc}<span class="ttp-text">${socials[b]}</span></span>`
 		  }
 		  document.querySelector("#members_list").innerHTML += `
 			<div class="card member">

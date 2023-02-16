@@ -10,12 +10,14 @@ document.querySelector(".page-footer").innerHTML =
 	</div>
 	<div class="space">
 		<h5>Links</h5>
-		<ul>
+		<ul style="font-size:16px">
 			<li><a target="_blank" href="//znci.dev">Home</a></li>
 			<li><a target="_blank" href="//docs.znci.dev">Docs</a></li>
 			<li><a target="_blank" href="//github.com/znci">GitHub</a></li>
+			<li><a target="_blank" href="//patreon.com/zncidev">Patreon</a></li>
+			<li><a target="_blank" href="/privacy.html">Privacy</a></li>
 		</ul>
-	</span>
+	</div>
 </div>
 `
 
