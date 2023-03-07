@@ -18,7 +18,7 @@ const memberList = [
 	{
 	  "name": "Cerq",
 	  "socials": {
-		"github": "Cerquaas",
+		"github": "Cerqiest",
 		"discord": "cerq#0001",
 		"email": "cerq@znci.dev",
 	  },
@@ -28,7 +28,7 @@ const memberList = [
 	  },
 	  "pfp": "https://github.com/Cerquaas.png",
 	  "badge": "staff",
-	  "note": `Cerq is the staffing manager and a developer for znci.`
+	  "note": `Cerq is the staffing manager and a developer for znci. They also are a community manager and social media manager.`
 	},
 	{
 	  "name": "grcq",
