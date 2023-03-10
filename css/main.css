@@ -192,23 +192,21 @@ a.button.button-success:hover {
 	TAGS
 ====================*/
 
-.tags {
+/* .tags {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-}
+} */
 :root {
 	--tag-color: rgb(83, 132, 255);
 }
 .tag {
-	padding: 4px;
+	padding: 2px;
 	border-radius: 10px;
 	margin: 5px;
 	width: 75px;
-	display: flex;
 	justify-content: center;
 	align-items: center;
 	color: var(--tag-color);
-	background-color: var(--bg-d6);
 }
 .tag.tag-green {
 	--tag-color: rgb(32, 255, 3);
@@ -272,7 +270,7 @@ section.section:nth-child(even) {
 	justify-content: space-evenly;
 }
 .card.member {
-	height: 300px;
+	height: 250px;
 	border-color: var(--bg-j1);
 	position: relative;
 }

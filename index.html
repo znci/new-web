@@ -7,6 +7,7 @@
 	<title>znci</title>
 	<link rel="stylesheet" href="https://azalea.znci.dev/css/index.css">
 	<link rel="stylesheet" href="./css/main.css">
+	<script src="https://cdn.tailwindcss.com"></script>
 	<script src="https://kit.fontawesome.com/cc60436b68.js" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js" crossorigin="anonymous"></script>
@@ -21,13 +22,14 @@
 </head>
 <body>
 	<div class="home-cover">
-		<div class="content">
+		<div class="content -mt-64">
 			<div class="center-content">
 				<div class="title">
 					<img class="wave-emoji" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f44b.svg" alt="">
-					<h1>Welcome to znci!</h1>
+					<h1 class="text-6xl">Welcome to znci!</h1>
 				</div>
 				<div class="description">
+					<h1 class="text-xs text-gray">Only up from here!</h1>
 					<p>znci is a team of developers who want to <br> make the web just a little bit better.</p>
 					<div class="button-row">
 						<a href="#projects" class="button">Projects</a>
@@ -38,12 +40,14 @@
 		</div>
 	</div>
 
-	<section class="section" id="projects">
-		<h1 style="font-size: 2.5rem; text-align: center; margin: 10px; font-weight: 700;">Projects</h1>
+	<section class="section -mt-64" id="projects">
+		<h1 class="text-center text-xs text-gray">or down, that's fine too...</h1>
+		<h1 class="text-center font-extrabold text-5xl">Projects</h1>
 		<div class="project-list"></div>
 	</section>
 	<section class="section" id="team">
-		<h1 style="font-size: 2.5rem; text-align: center; margin: 10px; font-weight: 700;">Team</h1>
+		<h1 class="text-center text-xs text-gray">even lower I guess...</h1>
+		<h1 class="text-center font-extrabold text-5xl">Our team</h1>
 		<div id="members_list"></div>
 	</section>
 

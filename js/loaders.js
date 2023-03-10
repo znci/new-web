@@ -12,7 +12,7 @@ const memberList = [
 		"timezone": "BST"
 	  },
 	  "pfp": "https://github.com/zNotChill.png",
-	  "badge": "founder",
+	  "badge": "founder/owner",
 	  "note": "zNotChill is the owner and founder of znci. They control most of the operations and control development."
 	},
 	{
@@ -26,8 +26,8 @@ const memberList = [
 		"country": "N/A",
 		"timezone": "N/A"
 	  },
-	  "pfp": "https://github.com/Cerquaas.png",
-	  "badge": "staff",
+	  "pfp": "https://github.com/cerqiest.png",
+	  "badge": "support manager, developer",
 	  "note": `Cerq is the staffing manager and a developer for znci. They also are a community manager and social media manager.`
 	},
 	{
@@ -43,11 +43,11 @@ const memberList = [
 		"email": "grcq@znci.dev",
 	  },
 	  "pfp": "https://github.com/grcq.png",
-	  "badge": "staff",
+	  "badge": "java developer",
 	  "note": "grcq is a developer for znci. They control most Java development at znci."
 	},
 	{
-	  "name": "BlockArchitech",
+	  "name": "gibbie",
 	  "socials": {
 		"github": "BlockArchitech",
 		"email": "block@znci.dev",
@@ -59,8 +59,25 @@ const memberList = [
 		"country": "N/A",
 		"timezone": "N/A",
 	  },
-	  "badge": "staff",
+	  "badge": "developer",
 	  "note": "BlockArchitech handles project management, development, and CI/CD for znci."
+	},
+	{
+	  "name": "unium",
+	  "socials": {
+		"github": "TheUnium",
+		"email": "unium@znci.dev",
+		"website": "theunium.github.io",
+		"discord": "unium#6850",
+		"youtube": "@leunium"
+	  },
+	  "pfp": "https://github.com/theunium.png",
+	  "country": {
+		"country": "N/A",
+		"timezone": "N/A",
+	  },
+	  "badge": "developer, designer, artist",
+	  "note": "unium is a developer for znci. They control most of the PHP site development at znci. They are also responsible for creating pixel art."
 	}
 ]
 const projectList = [
@@ -72,7 +89,7 @@ const projectList = [
 				"color": "green",
 			}
 		],
-	  	"icon": "/img/azalea.svg",
+	  	"icon": "https://raw.githubusercontent.com/znci/brandkit/main/src/logos/svg/azalea.svg",
 		"url": "https://github.com/znci/azalea",
 	  	"about": "Azalea is a CSS and soon-to-be JS framework, with features such as alerts, badges, buttons, cards, inputs, tooltips, etc."
 	},
@@ -84,21 +101,9 @@ const projectList = [
 				"color": "green",
 			}
 		],
-	  	"icon": "/img/qr.svg",
+	  	"icon": "https://raw.githubusercontent.com/znci/brandkit/main/src/logos/svg/qr.svg",
 		"url": "https://github.com/znci/qr",
 	  	"about": "znci QR is a QR code generator that currently supports links."
-	},
-	{
-	  	"name": "Web",
-	  	"tags": [
-			{
-				"tag": "private",
-				"color": "red",
-			}
-		],
-	  	"icon": "/img/placeholder.svg",
-		"url": "https://github.com/znci/web",
-	  	"about": "A simple website creator."
 	},
 	{
 	  	"name": "Paint",
@@ -120,7 +125,7 @@ const projectList = [
 				"color": "green",
 			}
 		],
-	  	"icon": "/img/placeholder.svg",
+	  	"icon": "./img/placeholder.svg",
 		"url": "https://github.com/znci/betterps",
 	  	"about": "A chrome extension for making the PlayerServers website better, with an inbuilt console terminal and other features."
 	},
@@ -132,7 +137,7 @@ const projectList = [
 				"color": "green",
 			}
 		],
-	  	"icon": "/img/placeholder.svg",
+	  	"icon": "./img/placeholder.svg",
 		"url": "https://github.com/znci/musicbridge",
 	  	"about": "A macOS App to control Spotify/Apple Music via MIDI."
 	},
@@ -144,10 +149,22 @@ const projectList = [
 				"color": "green",
 			}
 		],
-	  	"icon": "/img/placeholder.svg",
+	  	"icon": "./img/placeholder.svg",
 		"url": "https://github.com/znci/terminal",
 	  	"about": "A free, usable, and configurable terminal with documentation."
 	},
+	{
+		"name": "Web",
+		"tags": [
+		  	{
+			  	"tag": "private",
+			  	"color": "red",
+		  	}
+	  	],
+		"icon": "./img/placeholder.svg",
+	  	"url": "https://github.com/znci/web",
+		"about": "A simple website creator."
+  	}
 ]
 window.onload = () => {
 	try {
@@ -165,12 +182,13 @@ window.onload = () => {
 			badges += `<span class="tooltip">${isrc}<span class="ttp-text">${socials[b]}</span></span>`
 		  }
 		  document.querySelector("#members_list").innerHTML += `
-			<div class="card member">
+			<div class="card member rounded-lg">
 			  <div class="card-title">
 				<img src="${u.pfp}" loading="lazy" alt="${u.name}">
-				<div class="displayname">
-				  ${u.name}
+				<div class="displayname text-[#1AB2FF]">
+					${u.name}
 				</div>
+				<span class="text-gray text-xs">${u.badge}</span>
 			  </div>
 			  <div class="card-content">
 				<p>
@@ -198,19 +216,16 @@ window.onload = () => {
 			`
 		})
 		document.querySelector(".project-list").innerHTML += `
-			<div class="project-container">
+			<div class="project-container rounded-lg">
 				<div class="project-poster">
 					<a href="${project.url}" style="background-image: url(${project.icon})"></a>
 				</div>
 				<div class="project-body">
 					<div class="project-title">
-						${project.name}
+						${project.name} <span class="text-sm">${tags}</span>
 					</div>
-					<div class="project-content">
+					<div class="project-content pb-5">
 						<p>${project.about}</p>
-						<div class="tags">
-							${tags}
-						</div>
 					</div>
 				</div>
 			</div>
