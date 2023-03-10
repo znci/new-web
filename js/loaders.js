@@ -35,11 +35,11 @@ const memberList = [
 	  "socials": {
 		"github": "grcq",
 		"discord": "grcq#4516",
-		"website": "grcq.cf",
+		"website": "grcq.dev",
 	  },
 	  "country": {
 		"country": "no",
-		"timezone": "BST",
+		"timezone": "CET",
 		"email": "grcq@znci.dev",
 	  },
 	  "pfp": "https://github.com/grcq.png",
