@@ -27,8 +27,8 @@ const memberList = [
       timezone: "N/A",
     },
     pfp: "https://github.com/cerqiest.png",
-    badge: "support manager, developer",
-    note: `Cerq is the staffing manager and a developer for znci. They also are a community manager and social media manager.`,
+    badge: "staff manager, developer",
+    note: "Cerq is the staffing manager, support manager, and a developer for znci. They also handle social media and community interaction.",
   },
   {
     name: "grcq",
