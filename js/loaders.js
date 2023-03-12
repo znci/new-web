@@ -47,7 +47,7 @@ const memberList = [
     note: "grcq is a developer for znci. They control most Java development at znci.",
   },
   {
-    name: "gibbie",
+    name: "BlockArchitech",
     socials: {
       github: "BlockArchitech",
       email: "block@znci.dev",
@@ -191,13 +191,13 @@ window.onload = () => {
       }
 
       document.querySelector("#members_list").innerHTML += `
-			<div class="card member rounded-lg">
+			<div class="card member">
 			  <div class="card-title">
 				<img src="${u.pfp}" loading="lazy" alt="${u.name}">
-				<div class="displayname text-[#1AB2FF]">
+				<div class="displayname big-sub">
 					${u.name}
 				</div>
-				<span class="text-gray text-xs">${u.badge}</span>
+				<span class="text-gray small-sub-gray">${u.badge}</span>
 			  </div>
 			  <div class="card-content">
 				<p>
@@ -227,13 +227,13 @@ window.onload = () => {
     });
 
     document.querySelector(".project-list").innerHTML += `
-			<div class="project-container rounded-lg">
+			<div class="project-container">
 				<div class="project-poster">
 					<a href="${project.url}" style="background-image: url(${project.icon})"></a>
 				</div>
 				<div class="project-body">
 					<div class="project-title">
-						${project.name} <span class="text-sm">${tags}</span>
+						${project.name} <span class="small-sub-cl">${tags}</span>
 					</div>
 					<div class="project-content pb-5">
 						<p>${project.about}</p>
