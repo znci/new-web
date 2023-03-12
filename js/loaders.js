@@ -168,21 +168,28 @@ const projectList = [
     about: "A simple website creator.",
   },
 ];
+
 window.onload = () => {
   try {
     const members = memberList;
+
     for (let i = 0; i < members.length; i++) {
       let badges = "";
       let badgeNum = 0;
+
       const u = members[i];
       const socials = members[i].socials;
+
       for (const b in socials) {
         let isrc = `<i class="fa-brands fa-${b} fa-fw"></i>`;
+
         if (b === "website") isrc = `<i class="fa-solid fa-globe fa-fw"></i>`;
         if (b === "email") isrc = `<i class="fa-solid fa-envelope fa-fw"></i>`;
-        badgeNum++;
+
         badges += `<span class="tooltip">${isrc}<span class="ttp-text">${socials[b]}</span></span>`;
+        badgeNum++;
       }
+
       document.querySelector("#members_list").innerHTML += `
 			<div class="card member rounded-lg">
 			  <div class="card-title">
@@ -212,11 +219,13 @@ window.onload = () => {
 
   projectList.forEach((project) => {
     let tags = "";
+
     project.tags.forEach((tag) => {
       tags += `
 				<span class="tag tag-${tag.color}">${tag.tag}</span>
 			`;
     });
+
     document.querySelector(".project-list").innerHTML += `
 			<div class="project-container rounded-lg">
 				<div class="project-poster">
