@@ -116,6 +116,11 @@ h1.l-title {
 	display: block;
 	text-align: center;
 }
+img.inimg {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+}
 a, i {
 	color: #fff;
 	text-decoration: none;
@@ -701,4 +706,29 @@ section.policy-section > h6 {
 	.home-cover::before {
 		background-size: cover;
 	}
+}
+
+/*====================
+	EXT CARDS
+====================*/
+
+.ext-card {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	align-items: center;
+	height: 40px;
+	background-color: var(--bg-a5);
+	margin: 10px;
+	padding: 10px;
+}
+.ext-card:nth-child(odd) {
+	background-color: var(--bg-a8);
+}
+.ext-card .ext-card-title {
+	display: flex;
+	align-items: center;
+	font-size: 10px;
+}
+.ext-card .ext-card-description {
 }

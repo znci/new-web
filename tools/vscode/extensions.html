@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>VSCode Extensions</title>
+	<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+	<div class="centre-content">
+		<div class="content">
+			<div class="title">
+				<h1>Useful <img class="inimg" src="/img/vscode.svg" alt=""> Extensions</h1>
+			</div>
+			<div class="description">
+				Total Extensions: <span id="total_extensions">0</span>
+			</div>
+			<div class="footer">
+				<a href="#extensions" class="button button-success">Extensions</a>
+			</div>
+		</div>
+	</div>
+
+	<section class="section" id="extensions">
+		<span class="large-title">Extensions</span>
+		<div id="extensions_list"></div>
+	</section>
+</body>
+	<script>
+		const vscode_extensions = [
+			{
+				name: "DotENV",
+				description: "Support for dotenv file syntax",
+				itemNameUser: "mikestead.dotenv",
+			},
+			{
+				name: "Markdown All in One",
+				description: "All you need to write Markdown (keyboard shortcuts, table of contents, auto preview and more)",
+				itemNameUser: "yzhang.markdown-all-in-one",
+			},
+			{
+				name: "TS/JS postfix completion",
+				description: "Postfix completion for TypeScript and JavaScript",
+				itemNameUser: "ipatalas.vscode-postfix-ts",
+			},
+			{
+				name: "TensorFlow Snippets",
+				description: "TensorFlow Snippets for VS Code",
+				itemNameUser: "vahidk.tensorflow-snippets",
+			},
+			{
+				name: "GistPad",
+				description: "Create and manage GitHub gists from VS Code",
+				itemNameUser: "vsls-contrib.gistfs",
+			},
+			{
+				name: "Create Tests",
+				description: "Colorize your tabs",
+				itemNameUser: "hardikmodha.create-tests",
+			},
+			{
+				name: "Error Lens",
+				description: "Error Lens is a Visual Studio Code extension that highlights errors and warnings in your code",
+				itemNameUser: "usernamehw.errorlens",
+			},
+			{
+				name: "Icon Fonts",
+				description: "Snippets for popular icon fonts (Font Awesome, Iconions, Glyphicons, Octicons, Material Design Icons)",
+				itemNameUser: "idleberg.icon-fonts",
+			},
+			{
+				name: "Live Server",
+				description: "Launch a development local Server with live reload feature for static & dynamic pages",
+				itemNameUser: "ritwickdey.liveserver",
+			},
+			{
+				name: "ngrok for VS Code",
+				description: "Control ngrok from the command palette",
+				itemNameUser: "philnash.ngrok-for-vscode",
+			},
+			{
+				name: "Parameter Hints",
+				description: "Automatic parameter hints",
+				itemNameUser: "DominicVonk.parameter-hints",
+			},
+			{
+				name: "Partial Diff",
+				description: "Compare (diff) text selections within files, across files, or to the clipboard",
+				itemNameUser: "ryu1kn.partial-diff",
+			},
+			{
+				name: "Parse JSON as Code",
+				description: "Parse JSON as Code in Go, TypeScript, C#, C++ and more",
+				itemNameUser: "quicktype.quicktype",
+			},
+			{
+				name: "Path Autocomplete",
+				description: "Autocomplete filenames",
+				itemNameUser: "ionutvmi.path-autocomplete",
+			},
+			{
+				name: "Path Intellisense",
+				description: "Visual Studio Code plugin that autocompletes filenames",
+				itemNameUser: "christian-kohler.path-intellisense",
+			},
+			{
+				name: "Power Tools",
+				description: "A collection of useful VS Code extensions",
+				itemNameUser: "egomobile.vscode-powertools",
+			},
+			{
+				name: "REST Client",
+				description: "REST Client allows you to send HTTP request and view the response in Visual Studio Code directly",
+				itemNameUser: "humao.rest-client",
+			},
+			{
+				name: "Todo Tree",
+				description: "Show TODO, FIXME, etc. comment tags in a tree view",
+				itemNameUser: "Gruntfuggly.todo-tree",
+			},
+			{
+				name: "Toggle Quotes",
+				description: "Toggle between single and double quotes",
+				itemNameUser: "BriteSnow.vscode-toggle-quotes",
+			},
+			{
+				name: "WakaTime",
+				description: "Automatically track your time spent coding",
+				itemNameUser: "WakaTime.vscode-wakatime",
+			},
+			{
+				name: "Beautify",
+				description: "Beautify code in place for VS Code",
+				itemNameUser: "HookyQR.beautify",
+			},
+			{
+				name: "Paste and Indent",
+				description: "Paste and indent automatically",
+				itemNameUser: "Rubymaniac.vscode-paste-and-indent",
+			},
+			{
+				name: "Color Highlight",
+				description: "Highlight web colors in your editor",
+				itemNameUser: "naumovs.color-highlight",
+			},
+		]
+
+		function qs(selector) {
+			return document.querySelector(selector)
+		}
+
+		let prefix = "https://marketplace.visualstudio.com/items?itemName=";
+		let totalExtensions = vscode_extensions.length;
+		window.onload = () => {
+			qs("#total_extensions").innerText = totalExtensions;
+			vscode_extensions.forEach((v) => {
+				qs("#extensions_list").innerHTML +=
+				`
+					<a href="${prefix}${v.itemNameUser}">
+						<div class="ext-card">
+							<div class="ext-card-title">
+								<h2>${v.name}</h2>
+							</div>
+							<div class="ext-card-description">
+								<p>${v.description}</p>
+							</div>
+						</div>
+					</a>
+				`
+			})
+		}
+	</script>
+</html>
