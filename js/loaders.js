@@ -62,23 +62,6 @@ const memberList = [
     badge: "devops engineer",
     note: "BlockArchitech handles project management, development, and CI/CD for znci.",
   },
-  {
-    name: "unium",
-    socials: {
-      github: "TheUnium",
-      email: "unium@znci.dev",
-      website: "theunium.github.io",
-      discord: "unium#6850",
-      youtube: "@leunium",
-    },
-    pfp: "https://github.com/theunium.png",
-    country: {
-      country: "N/A",
-      timezone: "N/A",
-    },
-    badge: "developer, designer, artist",
-    note: "unium is a developer for znci. They control most of the PHP site development at znci. They are also responsible for creating pixel art.",
-  },
 ];
 const projectList = [
   {
