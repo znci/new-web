@@ -446,7 +446,7 @@ section.section:nth-child(even) {
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
 
 .home-cover {
-	height: 800px;
+	height: 1250px;
 	display: flex;
 	position: relative;
 	align-items: center;
