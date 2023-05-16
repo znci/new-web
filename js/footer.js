@@ -1,6 +1,4 @@
-
-document.querySelector(".page-footer").innerHTML = 
-`
+document.querySelector(".page-footer").innerHTML = `
 <div class="left">
 	<div class="-ml-64">
 		<img src="https://avatars.githubusercontent.com/u/89603476?s=200&v=4" alt="">
@@ -10,5 +8,4 @@ document.querySelector(".page-footer").innerHTML =
 	</div>
 	<div class="space"></div>
 </div>
-`
-
+`;
