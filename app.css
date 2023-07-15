@@ -1,65 +1,76 @@
 body {
-	margin: 0;
-	background-color: #1f1f1f;
+  margin: 0;
+  background-color: #1f1f1f;
+	color: white;
+	font-family: "Inter", sans-serif;
 }
 
-
-
 #particles-js {
-	position: absolute;
-	height: 100%;
-	width: 100%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 .text {
-	position: absolute;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 200px;
-	width: 300px;
-	top: calc(50% - 100px);
-	left: calc(50% - 150px);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 300px;
+  top: calc(50% - 100px);
+  left: calc(50% - 150px);
 }
 
 .img {
-	display: inline-block;
-	height: 100px;
-	z-index: 100;
+  display: inline-block;
+  height: 100px;
+  z-index: 100;
 }
 
 h1 {
-	color: #fff;
-	font-family: 'Inter';
-	font-size: 40px;
-	font-weight: 900;
-	text-align: center;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 900;
+  text-align: center;
 }
 
 h2 {
-	color: #fff;
-	font-family: 'Inter', sans-serif;
-	font-size: 20px;
-	font-weight: 40;
-	text-align: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 40;
+  text-align: center;
 }
 
 /* center div in dead center */
 #center {
-	position: absolute;
-	height: 200px;
-	width: 400px;
-	top: 50%;
-	left: 50%;
-	margin: -100px 0 0 -200px;
-	z-index: 1000;
-	/* slightly transparent background */
-	background-color: rgba(0, 0, 0, 0.2);
-	/* make sure contect is center, but not side-by-side */
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+  position: absolute;
+  min-height: 200px;
+  min-width: 400px;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -200px;
+  z-index: 1000;
+  /* slightly transparent background */
+  background-color: rgba(0, 0, 0, 0.2);
+  /* make sure contect is center, but not side-by-side */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+}
 
+a {
+  font-size: 20px;
+  text-decoration: none;
+}
 
-}	
+.padding-x {
+	padding-left: 3px;
+	padding-right: 3px; 
+}
+
+.margin-bottom {
+	margin-bottom: 25px;
+}
