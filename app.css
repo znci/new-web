@@ -58,15 +58,7 @@ h2 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 40px 40px;
-}
-
-img {
-  margin-bottom: 20px;
-}
-
-.img-rounded {
-  border-radius: 25%;
+  padding: 40px;
 }
 
 a {
