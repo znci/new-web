@@ -16,6 +16,22 @@ const memberList = [
 		note: "zNotChill is the owner and founder of znci. They control most of the operations and control development.",
 	},
 	{
+		name: "blockarchitech",
+		socials: {
+			github: "blockarchitech",
+			email: "block@znci.dev",
+			website: "blockarchitech.com",
+			gitlab: "blockarchitech",
+		},
+		pfp: "https://github.com/blockarchitech.png",
+		country: {
+			country: "N/A",
+			timezone: "N/A",
+		},
+		badge: "co founder",
+		note: "blockarchitech handles project management, development, and CI/CD for znci.",
+	},
+	{
 		name: "Cerq",
 		socials: {
 			github: "Cerqiest",
@@ -27,7 +43,7 @@ const memberList = [
 			timezone: "N/A",
 		},
 		pfp: "https://github.com/cerqiest.png",
-		badge: "staff manager, developer",
+		badge: "developer, founding member",
 		note: "Cerq is the staffing manager, support manager, and a developer for znci. They also handle social media and community interaction.",
 	},
 	{
@@ -47,22 +63,6 @@ const memberList = [
 		note: "grcq is a developer for znci. They control most Java development at znci.",
 	},
 	{
-		name: "blockarchitech",
-		socials: {
-			github: "blockarchitech",
-			email: "block@znci.dev",
-			website: "blockarchitech.com",
-			gitlab: "blockarchitech",
-		},
-		pfp: "https://github.com/blockarchitech.png",
-		country: {
-			country: "N/A",
-			timezone: "N/A",
-		},
-		badge: "devops engineer",
-		note: "blockarchitech handles project management, development, and CI/CD for znci.",
-	},
-	{
 		name: "unium",
 		socials: {
 			github: "TheUnium",
@@ -73,7 +73,7 @@ const memberList = [
 		},
 		pfp: "https://github.com/theunium.png",
 		country: {
-			country: "N/A",
+			country: "india",
 			timezone: "N/A",
 		},
 		badge: "developer, designer, artist",
