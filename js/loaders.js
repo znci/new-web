@@ -25,8 +25,8 @@ const memberList = [
 		},
 		pfp: "https://github.com/blockarchitech.png",
 		country: {
-			country: "N/A",
-			timezone: "N/A",
+			country: "USA",
+			timezone: "EST",
 		},
 		badge: "co founder",
 		note: "blockarchitech handles project management, development, and CI/CD for znci.",
