@@ -1,4 +1,4 @@
-document.querySelector("#contact_form").innerHTML = `
+document.querySelector("#contact_form").innerHTML = /* html */ `
 		<div class="center">
 			<span class="description" style="margin-bottom: 15px; margin-top: 5px;">If you have any questions, concerns, or just want to say hi, feel free to contact us!</span>
 		</div>
