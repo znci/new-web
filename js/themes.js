@@ -13,6 +13,6 @@ document.onload = () => {
     "--hue",
     `${localStorage.getItem("user-theme")}`
   );
-	
+
   console.log("Loaded user theme updating");
 };
