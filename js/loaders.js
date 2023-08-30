@@ -178,9 +178,8 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
 			`;
     }
-    console.log("Loaded members");
   } catch (error) {
-    console.log("Failed to initalize the member list:", error);
+    console.error("Failed to initalize the member list:", error);
   }
 
   projectList.forEach((project) => {
