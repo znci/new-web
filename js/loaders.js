@@ -82,35 +82,10 @@ const memberList = [
 ];
 const projectList = [
 	{
-		name: "Azalea",
-		tags: [
-			{
-				tag: "public",
-				color: "green",
-			},
-		],
-		icon: "https://raw.githubusercontent.com/znci/brandkit/main/src/logos/svg/azalea.svg",
-		url: "https://github.com/znci/azalea",
-		about:
-			"Azalea is a CSS and soon-to-be JS framework, with features such as alerts, badges, buttons, cards, inputs, tooltips, etc.",
-	},
-	{
-		name: "QR Generator",
-		tags: [
-			{
-				tag: "public",
-				color: "green",
-			},
-		],
-		icon: "https://raw.githubusercontent.com/znci/brandkit/main/src/logos/svg/qr.svg",
-		url: "https://github.com/znci/qr",
-		about: "znci QR is a QR code generator that currently supports links.",
-	},
-	{
 		name: "Paint",
 		tags: [
 			{
-				tag: "public",
+				tag: "open-source",
 				color: "green",
 			},
 		],
@@ -119,10 +94,34 @@ const projectList = [
 		about: "A free drawing app with PNG, SVG and JPG support.",
 	},
 	{
+		name: "Web",
+		tags: [
+			{
+				tag: "open-source",
+				color: "green",
+			},
+		],
+		icon: "./img/placeholder.svg",
+		url: "https://github.com/znci/web",
+		about: "A simple website creator.",
+	},
+	{
+		name: "Acid",
+		tags: [
+			{
+				tag: "open-source",
+				color: "green",
+			},
+		],
+		icon: "./img/placeholder.svg",
+		url: "https://github.com/zNotChill/acid",
+		about: "Electron terminal emulator for fun. (WIP)",
+	},
+	{
 		name: "BetterPS",
 		tags: [
 			{
-				tag: "public",
+				tag: "open-source",
 				color: "green",
 			},
 		],
@@ -130,30 +129,6 @@ const projectList = [
 		url: "https://github.com/znci/betterps",
 		about:
 			"A chrome extension for making the PlayerServers website better, with an inbuilt console terminal and other features.",
-	},
-	{
-		name: "Terminal",
-		tags: [
-			{
-				tag: "public",
-				color: "green",
-			},
-		],
-		icon: "./img/placeholder.svg",
-		url: "https://github.com/znci/terminal",
-		about: "A free, usable, and configurable terminal with documentation.",
-	},
-	{
-		name: "Web",
-		tags: [
-			{
-				tag: "private",
-				color: "red",
-			},
-		],
-		icon: "./img/placeholder.svg",
-		url: "https://github.com/znci/web",
-		about: "A simple website creator.",
 	},
 ];
 
