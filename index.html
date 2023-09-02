@@ -9,6 +9,7 @@
       content="znci is a team of developers who want to make the web just a little bit better."
     />
     <meta name="title" content="znci" />
+
     <title>znci</title>
     <link rel="stylesheet" href="https://azalea.znci.dev/css/index.css" />
     <link rel="stylesheet" href="./css/main.css" />
@@ -21,7 +22,6 @@
     <script src="./js/index.js"></script>
     <script src="./js/themes.js"></script>
 
-    <!-- im so sorry -->
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
@@ -72,27 +72,19 @@
         </div>
       </div>
     </div>
-    <section class="section" id="projects">
-      <span class="large-title">Our Projects</span>
-      <div class="project-list"></div>
-    </section>
-    <section class="section" id="team">
-      <span class="large-title">Our Team</span>
-      <div id="members_list"></div>
-    </section>
-    <section class="section" id="rss">
-      <span class="large-title">What's new @ znci</span>
-      <div class="rss-feed"></div>
-    </section>
-    <section class="section" id="contact">
-      <span class="large-title">Contact Us</span>
-      <div id="contact_form"></div>
-    </section>
+
+    <zncidev-project-list></zncidev-project-list>
+    <zncidev-member-list></zncidev-member-list>
+    <zncidev-rss-feed></zncidev-rss-feed>
+    <zncidev-contact-form></zncidev-contact-form>
+    <zncidev-footer></zncidev-footer>
 
     <div class="page-footer footer"></div>
   </body>
-  <script src="./js/footer.js"></script>
-  <script src="./js/loaders.js"></script>
-  <script src="./js/form.js"></script>
-  <script src="./js/rss.js"></script>
+
+  <script src="./js/components/zncidev-project-list.js" type="module"></script>
+  <script src="./js/components/zncidev-member-list.js" type="module"></script>
+  <script src="./js/components/zncidev-rss-feed.js" type="module"></script>
+  <script src="./js/components/zncidev-contact-form.js" type="module"></script>
+  <script src="./js/components/zncidev-footer.js" type="module"></script>
 </html>

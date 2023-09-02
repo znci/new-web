@@ -1,5 +1,10 @@
-document.querySelector(".page-footer").innerHTML = /* html */ `
-<div class="left">
+import { component, html } from "https://cdn.pika.dev/haunted";
+
+function ContactForm() {
+  return html` <section class="section" id="contact">
+    <span class="large-title">Contact Us</span>
+    <div id="contact_form">
+      <div class="left">
 	<div class="-ml-64">
 		<img src="https://avatars.githubusercontent.com/u/89603476?s=200&v=4" alt="">
 	</div>
@@ -25,4 +30,13 @@ document.querySelector(".page-footer").innerHTML = /* html */ `
 		<li>&bull; <a href="//znci.dev/tools/vscode/extensions.html">VSCode Extensions</a></li>
 	</ul>
 </div>
-`;
+    </div>
+  </section>`;
+}
+
+customElements.define(
+  "zncidev-footer",
+  component(ContactForm, {
+    useShadowDOM: false,
+  })
+);
