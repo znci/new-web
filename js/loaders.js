@@ -12,7 +12,7 @@ const memberList = [
       timezone: "BST",
     },
     pfp: "https://github.com/zNotChill.png",
-    badge: "founder/owner",
+    badge: "founder",
     note: "zNotChill is the owner and founder of znci. They control most of the operations and control development.",
   },
   {
@@ -28,7 +28,7 @@ const memberList = [
       country: "USA",
       timezone: "EST",
     },
-    badge: "co founder",
+    badge: "co-founder",
     note: "blockarchitech handles project management, development, and CI/CD for znci.",
   },
   {
@@ -86,7 +86,7 @@ const projectList = [
     name: "Paint",
     tags: [
       {
-        tag: "open-source",
+        tag: "OSS",
         color: "green",
       },
     ],
@@ -98,7 +98,7 @@ const projectList = [
     name: "Web",
     tags: [
       {
-        tag: "open-source",
+        tag: "OSS",
         color: "green",
       },
     ],
@@ -110,26 +110,13 @@ const projectList = [
     name: "Acid",
     tags: [
       {
-        tag: "open-source",
+        tag: "OSS",
         color: "green",
       },
     ],
     icon: "./img/placeholder.svg",
     url: "https://github.com/zNotChill/acid",
     about: "Electron terminal emulator for fun. (WIP)",
-  },
-  {
-    name: "BetterPS",
-    tags: [
-      {
-        tag: "open-source",
-        color: "green",
-      },
-    ],
-    icon: "./img/placeholder.svg",
-    url: "https://github.com/znci/betterps",
-    about:
-      "A chrome extension for making the PlayerServers website better, with an inbuilt console terminal and other features.",
   },
 ];
 
@@ -152,28 +139,37 @@ document.addEventListener("DOMContentLoaded", () => {
         if (b === "email")
           isrc = /* html */ `<i class="fa-solid fa-envelope fa-fw"></i>`;
 
-        badges += /* html */ `<span class="tooltip">${isrc}<span class="ttp-text">${socials[b]}</span></span>`;
+        badges += /* html */ `
+          <div class="social">
+            ${isrc}
+            <span class="social-text">
+              ${socials[b]}
+            </span>
+          </div>`;
         badgeNum++;
       }
 
-      document.querySelector("#members_list").innerHTML += /* html */ `
+      document.querySelector(".member-list").innerHTML += /* html */ `
         <div class="card member">
           <div class="card-title">
-          <img src="${u.pfp}" loading="lazy" alt="${u.name}">
-          <div class="displayname big-sub">
-            ${u.name}
-          </div>
-          <span class="text-gray small-sub-gray">${u.badge}</span>
+            <img class="rounded" src="${u.pfp}" loading="lazy" alt="${u.name}">
+          
+            <div class="name">
+              ${u.name}
+            </div>
+            <div class="badge">
+              <italic>${u.badge}</italic>
+            </div>
           </div>
           <div class="card-content">
-          <p>
-            ${u.note}
-          </p>
+            <div class="note">
+              ${u.note}
+            </div>
           </div>
-          <div class="bottom-content">	
-          <div class="badges">
-            ${badges}
-          </div>
+          <div class="card-footer">
+            <div class="badges">
+              ${badges}
+            </div>
           </div>
         </div>
 			`;
@@ -192,16 +188,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.querySelector(".project-list").innerHTML += /* html */ `
-			<div class="project-container">
-				<div class="project-poster">
-					<a href="${project.url}" style="background-image: url(${project.icon})"></a>
-				</div>
-				<div class="project-body">
-					<div class="project-title">
-						${project.name} <span class="small-sub-cl">${tags}</span>
-					</div>
-					<div class="project-content pb-5">
-						<p>${project.about}</p>
+			<div class="card">
+				<div class="card-title">
+					<img src="${project.icon}" loading="lazy" alt="${project.name}">
+				
+          <div class="gap-15">
+            <a href="${project.url}" target="_blank" rel="noopener noreferrer">
+              <h3>${project.name}</h3>
+            </a>
+            <span class="small-sub-cl">${tags}</span>
+          </div>
+        </div>
+				<div class="card-content">
+					<div class="project-content">
+						${project.about}
 					</div>
 				</div>
 			</div>
