@@ -163,18 +163,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
       badges += /* html */ `
         <div class="social">
-          <i class="fa-solid fa-clock fa-fw"></i>
+          <i class="fa-solid fa-calendar fa-fw"></i>
           <span class="social-text">
-            ${u.country.timezone} - <tz-display timezone=${u.country.timezoneCode}></tz-display>
+            ${u.joined}
           </span>
         </div>
       `;
 
       badges += /* html */ `
         <div class="social">
-          <i class="fa-solid fa-calendar fa-fw"></i>
+          <i class="fa-solid fa-clock fa-fw"></i>
           <span class="social-text">
-            ${u.joined}
+            ${u.country.timezone} - <tz-display timezone=${u.country.timezoneCode}></tz-display>
           </span>
         </div>
       `;
