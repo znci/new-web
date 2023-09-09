@@ -3,7 +3,7 @@ const memberList = [
     name: "zNotChill",
     socials: {
       github: "zNotChill",
-      discord: "chxll#3424",
+      discord: "@chxll",
       gitlab: "zNotChill",
       email: "znotchill@znci.dev",
     },
@@ -37,7 +37,7 @@ const memberList = [
     name: "cerq",
     socials: {
       github: "cerqiest",
-      discord: "cerq#0001",
+      discord: "@cerq",
       email: "cerq@znci.dev",
     },
     country: {
@@ -53,7 +53,7 @@ const memberList = [
     name: "grcq",
     socials: {
       github: "grcq",
-      discord: "grcq#4516",
+      discord: "@grcq",
       website: "grcq.dev",
       email: "grcq@znci.dev",
     },
@@ -72,7 +72,7 @@ const memberList = [
       github: "TheUnium",
       email: "unium@znci.dev",
       website: "theunium.github.io",
-      discord: "unium#6850",
+      discord: "@leunium",
       youtube: "@leunium",
     },
     pfp: "https://github.com/theunium.png",
