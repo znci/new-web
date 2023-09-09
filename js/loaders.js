@@ -8,12 +8,12 @@ const memberList = [
       email: "znotchill@znci.dev",
     },
     country: {
-      country: "gb",
+      country: "🇬🇧",
       timezone: "BST",
     },
     pfp: "https://github.com/zNotChill.png",
     badge: "founder",
-    note: "zNotChill is the owner and founder of znci. They control most of the operations and control development.",
+    note: "zNotChill is the owner and founder of znci. He controls most of the operations and development.",
   },
   {
     name: "blockarchitech",
@@ -25,26 +25,26 @@ const memberList = [
     },
     pfp: "https://github.com/blockarchitech.png",
     country: {
-      country: "USA",
+      country: "🇺🇸",
       timezone: "EST",
     },
     badge: "co-founder",
     note: "blockarchitech handles project management, development, and CI/CD for znci.",
   },
   {
-    name: "Cerq",
+    name: "cerq",
     socials: {
-      github: "Cerqiest",
+      github: "cerqiest",
       discord: "cerq#0001",
       email: "cerq@znci.dev",
     },
     country: {
-      country: "N/A",
-      timezone: "N/A",
+      country: "🇳🇱",
+      timezone: "CEST",
     },
     pfp: "https://github.com/cerqiest.png",
     badge: "developer, founding member",
-    note: "Cerq is the staffing manager, support manager, and a developer for znci. They also handle social media and community interaction.",
+    note: "cerq is the support manager and a developer for znci.",
   },
   {
     name: "grcq",
@@ -52,15 +52,15 @@ const memberList = [
       github: "grcq",
       discord: "grcq#4516",
       website: "grcq.dev",
+      email: "grcq@znci.dev",
     },
     country: {
-      country: "no",
+      country: "🇳🇴",
       timezone: "CET",
-      email: "grcq@znci.dev",
     },
     pfp: "https://github.com/grcq.png",
     badge: "java developer",
-    note: "grcq is a developer for znci. They control most Java development at znci.",
+    note: "grcq is a developer for znci. He controls most Java development at znci.",
   },
   {
     name: "unium",
@@ -73,11 +73,11 @@ const memberList = [
     },
     pfp: "https://github.com/theunium.png",
     country: {
-      country: "india",
-      timezone: "N/A",
+      country: "🇮🇳",
+      timezone: "IST",
     },
     badge: "developer, designer, artist",
-    note: "unium is a developer for znci. They control most of the PHP site development at znci. They are also responsible for creating pixel art.",
+    note: "unium is a developer for znci. He controls PHP site development at znci. He is also responsible for creating pixel art.",
   },
 ];
 
@@ -149,13 +149,22 @@ document.addEventListener("DOMContentLoaded", () => {
         badgeNum++;
       }
 
+      badges += /* html */ `
+        <div class="social">
+          <i class="fa-solid fa-clock fa-fw"></i>
+          <span class="social-text">
+            ${u.country.timezone}
+          </span>
+        </div>
+      `;
+
       document.querySelector(".member-list").innerHTML += /* html */ `
         <div class="card member">
           <div class="card-title">
             <img class="rounded" src="${u.pfp}" loading="lazy" alt="${u.name}">
           
             <div class="name">
-              ${u.name}
+              ${u.name} ${u.country.country}
             </div>
             <div class="badge">
               <italic>${u.badge}</italic>
