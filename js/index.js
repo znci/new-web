@@ -13,7 +13,7 @@ fetch("https://api.github.com/repos/znci/new-web/commits/main")
   .then((res) =>
     res.json().then((json) => {
       const commitHash = json.sha.slice(0, 7);
-      const commitDate = json.commit.author.date;
+      const commitDate = new Date(json.commit.author.date).toLocaleString();
       const commitAuthor = json.commit.author.name;
       const commitMessage = json.commit.message;
       const commitLink = `https://github.com/znci/new-web/commit/${json.sha}`;
