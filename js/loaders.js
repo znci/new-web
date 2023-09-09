@@ -13,6 +13,7 @@ const memberList = [
     },
     pfp: "https://github.com/zNotChill.png",
     badge: "founder",
+    joined: "August 2021",
     note: "zNotChill is the owner and founder of znci. He controls most of the operations and development.",
   },
   {
@@ -29,6 +30,7 @@ const memberList = [
       timezone: "EST",
     },
     badge: "co-founder",
+    joined: "December 2021",
     note: "blockarchitech handles project management, development, and CI/CD for znci.",
   },
   {
@@ -44,6 +46,7 @@ const memberList = [
     },
     pfp: "https://github.com/cerqiest.png",
     badge: "developer, founding member",
+    joined: "April 2022",
     note: "cerq is the support manager and a developer for znci.",
   },
   {
@@ -60,6 +63,7 @@ const memberList = [
     },
     pfp: "https://github.com/grcq.png",
     badge: "java developer",
+    joined: "June 2023",
     note: "grcq is a developer for znci. He controls most Java development at znci.",
   },
   {
@@ -77,6 +81,7 @@ const memberList = [
       timezone: "IST",
     },
     badge: "developer, designer, artist",
+    joined: "March 2023",
     note: "unium is a developer for znci. He controls PHP site development at znci. He is also responsible for creating pixel art.",
   },
 ];
@@ -154,6 +159,15 @@ document.addEventListener("DOMContentLoaded", () => {
           <i class="fa-solid fa-clock fa-fw"></i>
           <span class="social-text">
             ${u.country.timezone}
+          </span>
+        </div>
+      `;
+
+      badges += /* html */ `
+        <div class="social">
+          <i class="fa-solid fa-calendar fa-fw"></i>
+          <span class="social-text">
+            ${u.joined}
           </span>
         </div>
       `;
