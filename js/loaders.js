@@ -1,83 +1,95 @@
 const memberList = [
   {
     name: "zNotChill",
-    socials: {
-      github: "zNotChill",
-      discord: "chxll#3424",
-      gitlab: "zNotChill",
-      email: "znotchill@znci.dev",
-    },
-    country: {
-      country: "gb",
-      timezone: "BST",
-    },
     pfp: "https://github.com/zNotChill.png",
     badge: "founder",
-    note: "zNotChill is the owner and founder of znci. They control most of the operations and control development.",
+    joined: "August 2021",
+    note: "zNotChill is the owner and founder of znci. He controls most of the operations and development.",
+
+    socials: {
+      discord: "@chxll",
+      email: "znotchill@znci.dev",
+      github: "zNotChill",
+      gitlab: "zNotChill",
+    },
+    country: {
+      country: "🇬🇧",
+      timezone: "BST",
+      timezoneCode: "Europe/London",
+    },
   },
   {
     name: "blockarchitech",
-    socials: {
-      github: "blockarchitech",
-      email: "block@znci.dev",
-      website: "blockarchitech.com",
-      gitlab: "blockarchitech",
-    },
     pfp: "https://github.com/blockarchitech.png",
-    country: {
-      country: "USA",
-      timezone: "EST",
-    },
     badge: "co-founder",
+    joined: "December 2021",
     note: "blockarchitech handles project management, development, and CI/CD for znci.",
+    socials: {
+      discord: "@gibbiemonster",
+      email: "block@znci.dev",
+      github: "blockarchitech",
+      gitlab: "blockarchitech",
+      website: "blockarchitech.com",
+    },
+    country: {
+      country: "🇺🇸",
+      timezone: "EST",
+      timezoneCode: "America/New_York",
+    },
   },
   {
-    name: "Cerq",
-    socials: {
-      github: "Cerqiest",
-      discord: "cerq#0001",
-      email: "cerq@znci.dev",
-    },
-    country: {
-      country: "N/A",
-      timezone: "N/A",
-    },
+    name: "cerq",
     pfp: "https://github.com/cerqiest.png",
     badge: "developer, founding member",
-    note: "Cerq is the staffing manager, support manager, and a developer for znci. They also handle social media and community interaction.",
+    joined: "April 2022",
+    note: "cerq is the support manager and a developer for znci.",
+    socials: {
+      discord: "@cerq",
+      email: "cerq@znci.dev",
+      github: "cerqiest",
+    },
+    country: {
+      country: "🇳🇱",
+      timezone: "CEST",
+      timezoneCode: "Europe/Amsterdam",
+    },
   },
   {
     name: "grcq",
+    pfp: "https://github.com/grcq.png",
+    badge: "java developer",
+    joined: "June 2022",
+    note: "grcq is a developer for znci. He controls most Java development at znci.",
     socials: {
+      discord: "@grcq",
+      email: "grcq@znci.dev",
       github: "grcq",
-      discord: "grcq#4516",
       website: "grcq.dev",
     },
     country: {
-      country: "no",
-      timezone: "CET",
-      email: "grcq@znci.dev",
+      country: "🇳🇴",
+      timezone: "CEST",
+      timezoneCode: "Europe/Oslo",
     },
-    pfp: "https://github.com/grcq.png",
-    badge: "java developer",
-    note: "grcq is a developer for znci. They control most Java development at znci.",
   },
   {
     name: "unium",
+    pfp: "https://github.com/theunium.png",
+    badge: "developer, designer, artist",
+    joined: "March 2023",
+    note: "unium is a developer for znci. He controls PHP site development at znci. He is also responsible for creating pixel art.",
     socials: {
-      github: "TheUnium",
+      discord: "@leunium",
       email: "unium@znci.dev",
+      github: "TheUnium",
       website: "theunium.github.io",
-      discord: "unium#6850",
       youtube: "@leunium",
     },
-    pfp: "https://github.com/theunium.png",
     country: {
-      country: "india",
-      timezone: "N/A",
+      country: "🇮🇳",
+      timezone: "IST",
+      timezoneCode: "Asia/Kolkata",
     },
-    badge: "developer, designer, artist",
-    note: "unium is a developer for znci. They control most of the PHP site development at znci. They are also responsible for creating pixel art.",
   },
 ];
 
@@ -149,13 +161,31 @@ document.addEventListener("DOMContentLoaded", () => {
         badgeNum++;
       }
 
+      badges += /* html */ `
+        <div class="social">
+          <i class="fa-solid fa-calendar fa-fw"></i>
+          <span class="social-text">
+            ${u.joined}
+          </span>
+        </div>
+      `;
+
+      badges += /* html */ `
+        <div class="social">
+          <i class="fa-solid fa-clock fa-fw"></i>
+          <span class="social-text">
+            ${u.country.timezone} - <tz-display timezone=${u.country.timezoneCode}></tz-display>
+          </span>
+        </div>
+      `;
+
       document.querySelector(".member-list").innerHTML += /* html */ `
         <div class="card member">
           <div class="card-title">
             <img class="rounded" src="${u.pfp}" loading="lazy" alt="${u.name}">
           
             <div class="name">
-              ${u.name}
+              ${u.name} ${u.country.country}
             </div>
             <div class="badge">
               <italic>${u.badge}</italic>
