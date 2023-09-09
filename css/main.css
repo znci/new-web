@@ -401,6 +401,17 @@ section.section .section-title {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+@media screen and (max-width: 600px) {
+  .grid-4 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card .card-thumbnail img {
+    display: none;
+  }
+  .rss-title .tag {
+    display: none;
+  }
+}
 
 /* Footer */
 
