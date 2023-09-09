@@ -15,6 +15,7 @@ const memberList = [
     country: {
       country: "🇬🇧",
       timezone: "BST",
+      timezoneCode: "Europe/London",
     },
   },
   {
@@ -33,6 +34,7 @@ const memberList = [
     country: {
       country: "🇺🇸",
       timezone: "EST",
+      timezoneCode: "America/New_York",
     },
   },
   {
@@ -49,6 +51,7 @@ const memberList = [
     country: {
       country: "🇳🇱",
       timezone: "CEST",
+      timezoneCode: "Europe/Amsterdam",
     },
   },
   {
@@ -66,6 +69,7 @@ const memberList = [
     country: {
       country: "🇳🇴",
       timezone: "CET",
+      timezoneCode: "Europe/Oslo",
     },
   },
   {
@@ -84,6 +88,7 @@ const memberList = [
     country: {
       country: "🇮🇳",
       timezone: "IST",
+      timezoneCode: "Asia/Kolkata",
     },
   },
 ];
@@ -160,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="social">
           <i class="fa-solid fa-clock fa-fw"></i>
           <span class="social-text">
-            ${u.country.timezone}
+            ${u.country.timezone} - <tz-display timezone=${u.country.timezoneCode}></tz-display>
           </span>
         </div>
       `;
