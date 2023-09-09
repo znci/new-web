@@ -63,7 +63,7 @@ const memberList = [
     },
     pfp: "https://github.com/grcq.png",
     badge: "java developer",
-    joined: "June 2023",
+    joined: "June 2022",
     note: "grcq is a developer for znci. He controls most Java development at znci.",
   },
   {
