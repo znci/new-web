@@ -68,7 +68,7 @@ const memberList = [
     },
     country: {
       country: "🇳🇴",
-      timezone: "CET",
+      timezone: "CEST",
       timezoneCode: "Europe/Oslo",
     },
   },
