@@ -1,5 +1,3 @@
-// TODO: Reorganize this to follow a standard schema
-
 const memberList = [
   {
     name: "zNotChill",
