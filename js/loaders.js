@@ -5,7 +5,6 @@ const memberList = [
     badge: "founder",
     joined: "August 2021",
     note: "zNotChill is the owner and founder of znci. He controls most of the operations and development.",
-
     socials: {
       discord: "@chxll",
       email: "znotchill@znci.dev",
@@ -47,6 +46,8 @@ const memberList = [
       discord: "@cerq",
       email: "cerq@znci.dev",
       github: "cerqiest",
+      gitlab: "cerqiest",
+      website: "cerq.xyz",
     },
     country: {
       country: "🇳🇱",
