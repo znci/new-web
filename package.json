@@ -1,0 +1,15 @@
+{
+  "name": "new-web",
+  "version": "1.0.0",
+  "description": "- znci.dev source - Here be dragons.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "haunted": "^5.0.0"
+  }
+}
