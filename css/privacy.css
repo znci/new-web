@@ -1,0 +1,34 @@
+/* privacy.css */
+
+@import url(https://fonts.bunny.net/css?family=fira-mono:400,500,700|inter:100,200,300,400,500,600,700,800,900|manrope:200,300,400,500,600,700,800);
+
+html {
+  scrollbar-width: none;
+}
+
+body {
+  background-color: #16171c;
+  color: white;
+  font-family: Inter;
+  -ms-overflow-style: none;
+}
+
+main {
+  margin: 5%;
+}
+
+/* Remove scrollbars */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Style link tags */
+a {
+  color: #05b1ab;
+}
+
+p.italic {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 17px;
+}

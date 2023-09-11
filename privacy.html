@@ -5,59 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>znci</title>
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/privacy.css" />
 
     <!-- JS -->
     <script src="./js/index.js"></script>
   </head>
   <body>
+    <main>
+      <h1>Privacy Policy for znci</h1>
+      At znci, we are committed to protecting your privacy and personal
+      information. This privacy policy outlines how we collect, use, and
+      disclose information about you when you use any of our services, including
+      our website, znci.dev.
 
-    <section class="section privacy-policy" id="read-privacy">
-      <section class="policy-section">
-        <h1>Privacy Policy for znci</h1>
-        At znci, we are committed to protecting your privacy and personal
-        information.
-        <br />
-        This Privacy Policy outlines how we collect, use, and disclose
-        information about you when you use any of our services, including our
-        website, znci.dev.
-        <br /><br />
+      <section>
         <h2>What information do we collect?</h2>
         We collect information about you when you use our services, including:
-        <br />
         <ul>
-          <li class="check">Your Name</li>
-          <li class="check">Email Address</li>
+          <li>Your Name</li>
+          <li>Email Address</li>
+          <li>
+            Any other information you choose to provide whilst using or signing
+            up to our services.
+          </li>
         </ul>
-        and any other information you choose to provide. We also collect
-        information about your device, such as:
+
+        We also collect information about your device, including but not limited
+        to:
         <ul>
-          <li class="check">IP Address</li>
-          <li class="check">Browser Type</li>
-          <li class="check">Operating System</li>
+          <li class="check">IP address</li>
+          <li class="check">Browser type and user agent</li>
+          <li class="check">Operating system</li>
         </ul>
+
         We use this information to provide you with a better experience, to
         improve our services, and to provide you with information about our
         services.
+      </section>
 
-        <br /><br />
+      <section>
         <h2>How do we use your information?</h2>
         We do not sell, trade, or otherwise transfer your personal information
-        to outside parties. We may share your information with third parties for
-        the purpose of providing our services, These third-party service
-        providers are contractually obligated to protect the privacy and
-        security of your information and may only use it for the purpose of
-        providing services to us.
+        to outside parties except for the purpose of providing our services to
+        you. We may share your information with third parties for the purpose of
+        providing our services and these third-party services are contractually
+        obligated to protect the privacy and security of your information and
+        may only use it for the purpose of providing the specified service.
+      </section>
 
-        <br /><br />
+      <section>
         <h2>Cookies</h2>
         We use cookies to improve your experience on our website. Cookies are
         small text files that are placed on your computer or mobile device when
         you visit a website. They are widely used to make websites work, or work
         more efficiently, as well as to provide information to the owners of the
-        site.
+        site. When using our site, you consent to the use of cookies to provide
+        the service to you, as well as any other purpose outlined in this
+        policy. You can disable cookies in your browser settings, however, this
+        may affect your experience on our website (e.g. you may not be able to
+        login, use the service, or use certain features of the service because
+        of the way cookies are used to provide the service to you.)
+      </section>
 
-        <br /><br />
+      <section>
         <h2>How do we protect your information?</h2>
         We take the security of your personal information seriously and use
         appropriate measures to protect it from unauthorized access, use,
@@ -66,15 +76,26 @@
         a result, while we strive to protect your personal information, we
         cannot guarantee or warrant the security of any information you transmit
         to us or receive from us.
-
-        <br /><br />
-        <h2>Changes to this Privacy Policy</h2>
-        This Privacy Policy is effective as of 16 February 2023 and will remain
-        in effect except with respect to any changes in its provisions in the
-        future, which will be in effect immediately after being posted on this
-        page.
       </section>
-    </section>
 
+      <section>
+        <h2>Changes to this Privacy Policy</h2>
+        This Privacy Policy is effective as of
+        <strong>11 September 2023</strong> and will remain in effect except with
+        respect to any changes in its provisions in the future, which will be in
+        effect immediately after being posted on this page.
+      </section>
+
+      <p class="italic">
+        Thank you for reading our privacy policy. If you have any questions, you
+        may <span data-populate-email></span>
+      </p>
+    </main>
+
+    <script>
+      document.querySelector(
+        "[data-populate-email]"
+      ).innerHTML = `<a href="mailto:hello@znci.dev">send us an email.</a>`;
+    </script>
   </body>
 </html>
