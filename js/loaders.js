@@ -92,6 +92,24 @@ const memberList = [
       timezoneCode: "Asia/Kolkata",
     },
   },
+  {
+    name: "Kole",
+    pfp: "https://github.com/kuleander.png",
+    badge: "junior developer",
+    joined: "September 2023",
+    note: "Kole is the newest znci member who assists with development of our projects.",
+    socials: {
+      discord: "@kuleander",
+      // email: "TBD",
+      github: "kuleander",
+      youtube: "@Kuleander",
+    },
+    country: {
+      country: "🇳🇴",
+      timezone: "CEST",
+      timezoneCode: "Europe/Oslo",
+    },
+  },
 ];
 
 const projectList = [
