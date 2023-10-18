@@ -1,3 +1,5 @@
+node_modules
+package-lock.json
+
 functions/.vercel
-functions/node_modules
 functions/api

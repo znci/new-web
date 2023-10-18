@@ -1,83 +1,114 @@
 const memberList = [
   {
     name: "zNotChill",
+    pfp: "https://github.com/zNotChill.png",
+    badge: "founder",
+    joined: "August 2021",
+    note: "zNotChill is the owner and founder of znci. He controls most of the operations and development.",
     socials: {
-      github: "zNotChill",
-      discord: "chxll#3424",
-      gitlab: "zNotChill",
+      discord: "@chxll",
       email: "znotchill@znci.dev",
+      github: "zNotChill",
+      gitlab: "zNotChill",
     },
     country: {
-      country: "gb",
+      country: "🇬🇧",
       timezone: "BST",
+      timezoneCode: "Europe/London",
     },
-    pfp: "https://github.com/zNotChill.png",
-    badge: "founder/owner",
-    note: "zNotChill is the owner and founder of znci. They control most of the operations and control development.",
   },
   {
     name: "blockarchitech",
-    socials: {
-      github: "blockarchitech",
-      email: "block@znci.dev",
-      website: "blockarchitech.com",
-      gitlab: "blockarchitech",
-    },
     pfp: "https://github.com/blockarchitech.png",
-    country: {
-      country: "USA",
-      timezone: "EST",
-    },
-    badge: "co founder",
+    badge: "co-founder",
+    joined: "December 2021",
     note: "blockarchitech handles project management, development, and CI/CD for znci.",
+    socials: {
+      discord: "@gibbiemonster",
+      email: "block@znci.dev",
+      github: "blockarchitech",
+      gitlab: "blockarchitech",
+      website: "blockarchitech.com",
+    },
+    country: {
+      country: "🇺🇸",
+      timezone: "EST",
+      timezoneCode: "America/New_York",
+    },
   },
   {
-    name: "Cerq",
-    socials: {
-      github: "Cerqiest",
-      discord: "cerq#0001",
-      email: "cerq@znci.dev",
-    },
-    country: {
-      country: "N/A",
-      timezone: "N/A",
-    },
+    name: "cerq",
     pfp: "https://github.com/cerqiest.png",
     badge: "developer, founding member",
-    note: "Cerq is the staffing manager, support manager, and a developer for znci. They also handle social media and community interaction.",
+    joined: "April 2022",
+    note: "cerq is the support manager and a developer for znci.",
+    socials: {
+      discord: "@cerq",
+      email: "cerq@znci.dev",
+      github: "cerqiest",
+      gitlab: "cerqiest",
+      website: "cerq.xyz",
+    },
+    country: {
+      country: "🇳🇱",
+      timezone: "CEST",
+      timezoneCode: "Europe/Amsterdam",
+    },
   },
   {
     name: "grcq",
+    pfp: "https://github.com/grcq.png",
+    badge: "java developer",
+    joined: "June 2022",
+    note: "grcq is a developer for znci. He controls most Java development at znci.",
     socials: {
+      discord: "@grcq",
+      email: "grcq@znci.dev",
       github: "grcq",
-      discord: "grcq#4516",
       website: "grcq.dev",
     },
     country: {
-      country: "no",
-      timezone: "CET",
-      email: "grcq@znci.dev",
+      country: "🇳🇴",
+      timezone: "CEST",
+      timezoneCode: "Europe/Oslo",
     },
-    pfp: "https://github.com/grcq.png",
-    badge: "java developer",
-    note: "grcq is a developer for znci. They control most Java development at znci.",
   },
   {
     name: "unium",
+    pfp: "https://github.com/theunium.png",
+    badge: "developer, designer, artist",
+    joined: "March 2023",
+    note: "unium is a developer for znci. He controls PHP site development at znci. He is also responsible for creating pixel art.",
     socials: {
-      github: "TheUnium",
+      discord: "@leunium",
       email: "unium@znci.dev",
+      github: "TheUnium",
       website: "theunium.github.io",
-      discord: "unium#6850",
       youtube: "@leunium",
     },
-    pfp: "https://github.com/theunium.png",
     country: {
-      country: "india",
-      timezone: "N/A",
+      country: "🇮🇳",
+      timezone: "IST",
+      timezoneCode: "Asia/Kolkata",
     },
-    badge: "developer, designer, artist",
-    note: "unium is a developer for znci. They control most of the PHP site development at znci. They are also responsible for creating pixel art.",
+  },
+  {
+    name: "Kole",
+    pfp: "https://github.com/kuleander.png",
+    badge: "junior developer",
+    joined: "September 2023",
+    note: "Kole is the newest znci member who assists with development of our projects.",
+    socials: {
+      discord: "@kuleander",
+      // email: "TBD",
+      github: "kuleander",
+      youtube: "@Kuleander",
+    },
+    country: {
+      country: "🇳🇴",
+      timezone: "CEST",
+      timezoneCode: "Europe/Oslo",
+    },
   },
 ];
 
@@ -86,7 +117,7 @@ const projectList = [
     name: "Paint",
     tags: [
       {
-        tag: "open-source",
+        tag: "OSS",
         color: "green",
       },
     ],
@@ -98,7 +129,7 @@ const projectList = [
     name: "Web",
     tags: [
       {
-        tag: "open-source",
+        tag: "OSS",
         color: "green",
       },
     ],
@@ -110,26 +141,13 @@ const projectList = [
     name: "Acid",
     tags: [
       {
-        tag: "open-source",
+        tag: "OSS",
         color: "green",
       },
     ],
     icon: "./img/placeholder.svg",
     url: "https://github.com/zNotChill/acid",
     about: "Electron terminal emulator for fun. (WIP)",
-  },
-  {
-    name: "BetterPS",
-    tags: [
-      {
-        tag: "open-source",
-        color: "green",
-      },
-    ],
-    icon: "./img/placeholder.svg",
-    url: "https://github.com/znci/betterps",
-    about:
-      "A chrome extension for making the PlayerServers website better, with an inbuilt console terminal and other features.",
   },
 ];
 
@@ -152,28 +170,55 @@ document.addEventListener("DOMContentLoaded", () => {
         if (b === "email")
           isrc = /* html */ `<i class="fa-solid fa-envelope fa-fw"></i>`;
 
-        badges += /* html */ `<span class="tooltip">${isrc}<span class="ttp-text">${socials[b]}</span></span>`;
+        badges += /* html */ `
+          <div class="social">
+            ${isrc}
+            <span class="social-text">
+              ${socials[b]}
+            </span>
+          </div>`;
         badgeNum++;
       }
 
-      document.querySelector("#members_list").innerHTML += /* html */ `
+      badges += /* html */ `
+        <div class="social">
+          <i class="fa-solid fa-calendar fa-fw"></i>
+          <span class="social-text">
+            ${u.joined}
+          </span>
+        </div>
+      `;
+
+      badges += /* html */ `
+        <div class="social">
+          <i class="fa-solid fa-clock fa-fw"></i>
+          <span class="social-text">
+            ${u.country.timezone} - <tz-display timezone=${u.country.timezoneCode}></tz-display>
+          </span>
+        </div>
+      `;
+
+      document.querySelector(".member-list").innerHTML += /* html */ `
         <div class="card member">
           <div class="card-title">
-          <img src="${u.pfp}" loading="lazy" alt="${u.name}">
-          <div class="displayname big-sub">
-            ${u.name}
-          </div>
-          <span class="text-gray small-sub-gray">${u.badge}</span>
+            <img class="rounded" src="${u.pfp}" loading="lazy" alt="${u.name}">
+          
+            <div class="name">
+              ${u.name} ${u.country.country}
+            </div>
+            <div class="badge">
+              <italic>${u.badge}</italic>
+            </div>
           </div>
           <div class="card-content">
-          <p>
-            ${u.note}
-          </p>
+            <div class="note">
+              ${u.note}
+            </div>
           </div>
-          <div class="bottom-content">	
-          <div class="badges">
-            ${badges}
-          </div>
+          <div class="card-footer">
+            <div class="badges">
+              ${badges}
+            </div>
           </div>
         </div>
 			`;
@@ -192,16 +237,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.querySelector(".project-list").innerHTML += /* html */ `
-			<div class="project-container">
-				<div class="project-poster">
-					<a href="${project.url}" style="background-image: url(${project.icon})"></a>
-				</div>
-				<div class="project-body">
-					<div class="project-title">
-						${project.name} <span class="small-sub-cl">${tags}</span>
-					</div>
-					<div class="project-content pb-5">
-						<p>${project.about}</p>
+			<div class="card">
+				<div class="card-title">
+					<img src="${project.icon}" loading="lazy" alt="${project.name}">
+				
+          <div class="gap-15">
+            <a href="${project.url}" target="_blank" rel="noopener noreferrer">
+              <h3>${project.name}</h3>
+            </a>
+            <span class="small-sub-cl">${tags}</span>
+          </div>
+        </div>
+				<div class="card-content">
+					<div class="project-content">
+						${project.about}
 					</div>
 				</div>
 			</div>

@@ -13,7 +13,7 @@ fetch("https://api.github.com/repos/znci/new-web/commits/main")
   .then((res) =>
     res.json().then((json) => {
       const commitHash = json.sha.slice(0, 7);
-      const commitDate = json.commit.author.date;
+      const commitDate = new Date(json.commit.author.date).toLocaleString();
       const commitAuthor = json.commit.author.name;
       const commitMessage = json.commit.message;
       const commitLink = `https://github.com/znci/new-web/commit/${json.sha}`;
@@ -43,3 +43,16 @@ fetch("https://api.github.com/repos/znci/new-web/commits/main")
   .catch((err) => {
     console.error(err);
   });
+
+// Check if user is on a mobile size or has a small screen
+const isMobile = window.matchMedia("(max-width: 768px)").matches;
+const previouslyAcknowledgedMobileAlert =
+  localStorage.getItem("previouslyAcknowledgedMobileAlert") || false;
+
+if (isMobile && !previouslyAcknowledgedMobileAlert) {
+  alert(
+    "👋🏼 Hey! It looks like you're using a mobile device. Just so you know, the znci website might not look quite right on mobile devices and we're actively looking for ways to improve your experience. (Not using a mobile device? Please let us know via the contact form below!)"
+  );
+
+  localStorage.setItem("previouslyAcknowledgedMobileAlert", true);
+}
