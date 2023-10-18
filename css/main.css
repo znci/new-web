@@ -230,6 +230,14 @@ a.button.button-success:hover {
   justify-content: center;
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+}
+
 /*====================
 	TAGS
 ====================*/
