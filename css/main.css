@@ -176,7 +176,6 @@ textarea {
   height: 100%;
   z-index: -2;
 
-  background-image: url(/img/bg.svg);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -190,7 +189,7 @@ textarea {
   width: 700px;
   color: #fff;
   padding-bottom: 20px;
-  text-shadow: 0 5px 1px rgba(0, 0, 0, 0.2);
+  /* text-shadow: 0 5px 1px rgba(0, 0, 0, 0.2); */
 }
 .hero .hero-subtitle {
   font-size: var(--hero-subtitle-size);
@@ -222,7 +221,7 @@ a:hover {
   border-radius: 6px;
   background-color: var(--accent-dark);
   color: #ffffff;
-  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+  /* text-shadow: 0 2px 1px rgba(0, 0, 0, 0.2); */
   font-family: var(--font);
   font-size: var(--hero-subtitle-size);
   font-weight: 500;

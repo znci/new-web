@@ -2,6 +2,25 @@
 // Licensed under the MIT License.
 // See LICENSE in the project root for license information.
 
+// set hero::before to a video /img/bgv.mp4
+const hero = document.querySelector(".hero");
+const video = document.createElement("video");
+video.src = "/img/bgv.mp4";
+video.autoplay = true;
+video.loop = true;
+video.muted = true;
+video.playsInline = true;
+video.style.position = "absolute";
+video.style.top = "0";
+video.style.left = "0";
+video.style.width = "100%";
+video.style.height = "100%";
+video.style.objectFit = "cover";
+video.style.zIndex = "-1";
+hero.appendChild(video);
+
+
+
 const znciAscii = `███████╗███╗   ██╗ ██████╗██╗\n╚══███╔╝████╗  ██║██╔════╝██║\n  ███╔╝ ██╔██╗ ██║██║     ██║\n ███╔╝  ██║╚██╗██║██║     ██║\n███████╗██║ ╚████║╚██████╗██║\n╚══════╝╚═╝  ╚═══╝ ╚═════╝╚═╝`;
 console.log(
   `%c${znciAscii}\n\n %cLoading znci website...`,
