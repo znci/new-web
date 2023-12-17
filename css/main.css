@@ -82,6 +82,10 @@ b,
   justify-content: center;
 }
 
+.center-text {
+  text-align: center;
+}
+
 input,
 textarea {
   resize: none;

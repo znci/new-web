@@ -19,8 +19,6 @@ video.style.objectFit = "cover";
 video.style.zIndex = "-1";
 hero.appendChild(video);
 
-
-
 const znciAscii = `███████╗███╗   ██╗ ██████╗██╗\n╚══███╔╝████╗  ██║██╔════╝██║\n  ███╔╝ ██╔██╗ ██║██║     ██║\n ███╔╝  ██║╚██╗██║██║     ██║\n███████╗██║ ╚████║╚██████╗██║\n╚══════╝╚═╝  ╚═══╝ ╚═════╝╚═╝`;
 console.log(
   `%c${znciAscii}\n\n %cLoading znci website...`,
@@ -63,14 +61,13 @@ fetch("https://api.github.com/repos/znci/new-web/commits/main")
     console.error(err);
   });
 
-// Check if user is on a mobile size or has a small screen
 const isMobile = window.matchMedia("(max-width: 768px)").matches;
 const previouslyAcknowledgedMobileAlert =
   localStorage.getItem("previouslyAcknowledgedMobileAlert") || false;
 
 if (isMobile && !previouslyAcknowledgedMobileAlert) {
   alert(
-    "👋🏼 Hey! It looks like you're using a mobile device. Just so you know, the znci website might not look quite right on mobile devices and we're actively looking for ways to improve your experience. (Not using a mobile device? Please let us know via the contact form below!)"
+    "👋🏼 Hey! It looks like you're using a mobile device. Just so you know, the znci website might not look quite right on mobile devices and we're actively looking for ways to improve your experience. (Not using a mobile device and mistakenly received this alert? Please let us know via the contact form below!)"
   );
 
   localStorage.setItem("previouslyAcknowledgedMobileAlert", true);
