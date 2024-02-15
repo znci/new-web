@@ -110,6 +110,23 @@ const memberList = [
       timezoneCode: "Europe/Oslo",
     },
   },
+  {
+    name: "Isaiyah",
+    pfp: "https://github.com/Isaiyah717.png",
+    badge: "junior developer, moderator",
+    joined: "September 2023",
+    note: "Isaiyah is a junior developer and moderator for znci.",
+    socials: {
+      discord: "@.isaiyah",
+      // email: "TBD",
+      github: "Isaiyah717",
+    },
+    country: {
+      country: "🇺🇸",
+      timezone: "PST",
+      timezoneCode: "America/Los_Angeles",
+    },
+  },
 ];
 
 const projectList = [
