@@ -114,7 +114,7 @@ const memberList = [
     name: "Isaiyah",
     pfp: "https://github.com/Isaiyah717.png",
     badge: "junior developer, moderator",
-    joined: "September 2023",
+    joined: "February 2024",
     note: "Isaiyah is a junior developer and moderator for znci.",
     socials: {
       discord: "@.isaiyah",
