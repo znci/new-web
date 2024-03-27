@@ -137,7 +137,7 @@ const memberList = [
       discord: "@koloja.",
       // email: "TBD",
       github: "koloja",
-      website: "koloja.dev"
+      website: "koloja.dev",
     },
     country: {
       country: "🇬🇧",
@@ -199,17 +199,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
       for (const b in socials) {
         let isrc = /* html */ `<i class="fa-brands fa-${b} fa-fw"></i>`;
+        let link;
 
-        if (b === "website")
-          isrc = /* html */ `<i class="fa-solid fa-globe fa-fw"></i>`;
-        if (b === "email")
-          isrc = /* html */ `<i class="fa-solid fa-envelope fa-fw"></i>`;
+        switch (b) {
+          case "website":
+            isrc = /* html */ `<i class="fa-solid fa-globe fa-fw"></i>`;
+            link = `https://${socials[b]}`;
+            break;
+          case "email":
+            isrc = /* html */ `<i class="fa-solid fa-envelope fa-fw"></i>`;
+            link = `mailto:${socials[b]}`;
+            break;
+          case "github":
+            link = `https://github.com/${socials[b]}`;
+            break;
+          case "gitlab":
+            link = `https://gitlab.com/${socials[b]}`;
+            break;
+        }
 
         badges += /* html */ `
           <div class="social">
             ${isrc}
             <span class="social-text">
-              ${socials[b]}
+              ${
+                link
+                  ? `<a href="${link}" target="_blank" rel="noopener noreferrer" class="social-text" >${socials[b]}</a>`
+                  : socials[b]
+              }
             </span>
           </div>`;
         badgeNum++;
