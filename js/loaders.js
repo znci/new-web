@@ -97,7 +97,7 @@ const memberList = [
     pfp: "https://github.com/kuleander.png",
     badge: "junior developer",
     joined: "September 2023",
-    note: "Kole is the newest znci member who assists with development of our projects.",
+    note: "Kole is a znci member who assists with specific aspects of our projects.",
     socials: {
       discord: "@kuleander",
       // email: "TBD",
@@ -125,6 +125,24 @@ const memberList = [
       country: "🇺🇸",
       timezone: "PST",
       timezoneCode: "America/Los_Angeles",
+    },
+  },
+  {
+    name: "koloja",
+    pfp: "https://github.com/koloja.png",
+    badge: "junior developer",
+    joined: "March 2024",
+    note: "koloja is a junior developer for znci assisting with specific projects.",
+    socials: {
+      discord: "@koloja.",
+      // email: "TBD",
+      github: "koloja",
+      website: "koloja.dev"
+    },
+    country: {
+      country: "🇬🇧",
+      timezone: "BST",
+      timezoneCode: "Europe/London",
     },
   },
 ];
