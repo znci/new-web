@@ -32,8 +32,8 @@ const memberList = [
     },
     country: {
       country: "🇺🇸",
-      timezone: "EST",
-      timezoneCode: "America/New_York",
+      timezone: "AMST",
+      timezoneCode: "America/Phoenix",
     },
   },
   {
