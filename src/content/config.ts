@@ -26,9 +26,9 @@ export const collections = {
         z.object({
           tag: z.enum(["OSS", "CSS"]),
           color: z.enum(["green", "red"]),
-        })
+        }),
       ),
-      icon: z.string().url(),
+      icon: z.string(), // *technichally* not an URL (local resource)
       url: z.string().url(),
     }),
   }),
