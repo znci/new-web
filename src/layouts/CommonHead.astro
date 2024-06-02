@@ -1,0 +1,15 @@
+---
+const { title } = Astro.props;
+---
+
+<title>{title} | znci</title>
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta name="title" content={`${title} | znci`} />
+<meta
+  name="description"
+  content="znci is a team of developers who want to make the web just a little bit better."
+/>
