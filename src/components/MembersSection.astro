@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
-import { MemberSocial } from "./qwik/MemberSocial";
-import { Clock } from "./qwik/Clock";
+import { MemberSocial } from "./solid/MemberSocial";
+import { Clock } from "./solid/Clock";
 import { Image } from "astro:assets";
 
 const members = await getCollection("members");
@@ -83,7 +83,7 @@ const members = await getCollection("members");
                   </MemberSocial>
                   <MemberSocial icon="clock">
                     {member.data.userFriendlyTimezone} -{" "}
-                    <Clock timezone={member.data.timezone} />
+                    <Clock timezone={member.data.timezone} client:visible />
                   </MemberSocial>
                 </div>
               </div>

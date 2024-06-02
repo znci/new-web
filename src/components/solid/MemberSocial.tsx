@@ -1,11 +1,10 @@
-import { Slot, component$ } from "@builder.io/qwik";
+import type { JSX } from "solid-js/jsx-runtime";
 
-interface Props {
+export function MemberSocial(props: {
   icon: string;
   link?: string;
-}
-
-export const MemberSocial = component$<Props>((props) => {
+  children: JSX.Element;
+}) {
   const usingSolidIcons = ["envelope", "globe", "calendar", "clock"].includes(
     props.icon,
   );
@@ -13,11 +12,12 @@ export const MemberSocial = component$<Props>((props) => {
   return (
     <div class="social">
       <i
-        class={[
-          "fa-fw",
-          `fa-${props.icon}`,
-          usingSolidIcons ? "fa-solid" : "fa-brands",
-        ]}
+        class="fa-fw"
+        classList={{
+          [`fa-${props.icon}`]: true,
+          "fa-solid": usingSolidIcons,
+          "fa-brands": !usingSolidIcons,
+        }}
         aria-hidden="true"
       ></i>
 
@@ -25,13 +25,13 @@ export const MemberSocial = component$<Props>((props) => {
         <span>
           {props.link ? (
             <a href={props.link} target="_blank" class="social-text">
-              <Slot />
+              {props.children}
             </a>
           ) : (
-            <Slot />
+            props.children
           )}
         </span>
       </div>
     </div>
   );
-});
+}

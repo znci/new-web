@@ -6,6 +6,7 @@ import bgvVideo from "../assets/bgv.mp4";
 import MembersSection from "../components/MembersSection.astro";
 import { getCollection } from "astro:content";
 import ProjectsSection from "../components/ProjectsSection.astro";
+import RSSSection from "../components/RSSSection.astro";
 const members = await getCollection("members");
 ---
 
@@ -29,11 +30,8 @@ const members = await getCollection("members");
 
   <ProjectsSection />
   <MembersSection />
+  <RSSSection />
 
-  <section class="section" id="rss">
-    <div class="section-title">News @ <b>znci</b></div>
-    <div class="rss-feed"></div>
-  </section>
   <section class="section centered" id="contact">
     <div class="section-title">Contact</div>
     <div class="section-content">
