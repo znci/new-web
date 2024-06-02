@@ -1,4 +1,4 @@
-import { createSignal, onCleanup, onMount } from "solid-js";
+import { createSignal, onCleanup } from "solid-js";
 
 function buildTimeString(timezone: string) {
   return new Date().toLocaleString("en-US", {
