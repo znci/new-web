@@ -1,5 +1,6 @@
 ---
 import { z } from "astro/zod";
+import { getSecret } from "astro:env/server";
 import DocumentShell from "../layouts/DocumentShell.astro";
 
 export const prerender = false;
@@ -17,7 +18,7 @@ if (Astro.request.method === "POST") {
       .parse(Object.fromEntries(await Astro.request.formData()));
 
     try {
-      await fetch(import.meta.env.WEBHOOK_URL, {
+      await fetch(getSecret("WEBHOOK_URL")!, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -58,7 +59,7 @@ if (Astro.request.method === "POST") {
         success: true,
       };
     } catch (e) {
-      console.error(e);
+      console.error("An error occurred while sending the form submission.", e);
 
       result = {
         success: false,
@@ -66,7 +67,7 @@ if (Astro.request.method === "POST") {
       };
     }
   } catch (e) {
-    console.error(e);
+    console.error("Invalid data was submitted to the form.", e);
 
     result = {
       success: false,
