@@ -1,0 +1,96 @@
+---
+import { getCollection } from "astro:content";
+import { MemberSocial } from "./solid/MemberSocial";
+import { Clock } from "./solid/Clock";
+import { Image } from "astro:assets";
+
+const members = await getCollection("members");
+---
+
+<section class="section" id="team">
+  <div class="section-title">About Us</div>
+  <div class="section-content">
+    <div class="grid-4 member-list">
+      {
+        members.map((member) => (
+          <>
+            <div class="card member">
+              <div class="card-title">
+                <Image
+                  class="rounded"
+                  src={`https://github.com/${member.data.github}.png`}
+                  alt={member.data.name}
+                  width={50}
+                  height={50}
+                  loading="lazy"
+                />
+
+                <div class="name">
+                  {member.data.name} {member.data.regionEmoji}
+                </div>
+                <div class="badge">
+                  <em>{member.data.role}</em>
+                </div>
+              </div>
+              <div class="card-content">
+                <div class="note">{member.body}</div>
+              </div>
+              <div class="card-footer">
+                <div class="badges">
+                  <MemberSocial icon="discord">
+                    {member.data.discord}
+                  </MemberSocial>
+                  {member.data.email && (
+                    <MemberSocial
+                      icon="envelope"
+                      link={`mailto:${member.data.email}`}
+                    >
+                      {member.data.email}
+                    </MemberSocial>
+                  )}
+                  <MemberSocial
+                    icon="github"
+                    link={`https://github.com/${member.data.github}`}
+                  >
+                    {member.data.github}
+                  </MemberSocial>
+                  {member.data.gitlab && (
+                    <MemberSocial
+                      icon="gitlab"
+                      link={`https://gitlab.com/${member.data.gitlab}`}
+                    >
+                      {member.data.gitlab}
+                    </MemberSocial>
+                  )}
+                  {member.data.youtube && (
+                    <MemberSocial
+                      icon="youtube"
+                      link={`https://youtube.com/${member.data.youtube}`}
+                    >
+                      {member.data.youtube}
+                    </MemberSocial>
+                  )}
+                  {member.data.website && (
+                    <MemberSocial
+                      icon="globe"
+                      link={`https://${member.data.website}`}
+                    >
+                      {member.data.website}
+                    </MemberSocial>
+                  )}
+                  <MemberSocial icon="calendar">
+                    {member.data.joinDate}
+                  </MemberSocial>
+                  <MemberSocial icon="clock">
+                    {member.data.userFriendlyTimezone} -{" "}
+                    <Clock timezone={member.data.timezone} client:visible />
+                  </MemberSocial>
+                </div>
+              </div>
+            </div>
+          </>
+        ))
+      }
+    </div>
+  </div>
+</section>

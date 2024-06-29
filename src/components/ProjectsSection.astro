@@ -1,0 +1,50 @@
+---
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("projects");
+---
+
+<section class="section" id="projects">
+  <div class="section-title">Projects</div>
+  <div class="section-content">
+    <div class="grid-3 project-list">
+      {
+        projects.map((project) => (
+          <div class="card">
+            <div class="card-title">
+              <Image
+                src={project.data.icon}
+                alt={project.data.name}
+                width={50}
+                height={50}
+                loading="lazy"
+              />
+
+              <div class="gap-15">
+                <a
+                  href={project.data.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <h3>{project.data.name}</h3>
+                </a>
+                <span class="small-sub-cl">
+                  <span
+                    class="tag"
+                    class:list={[`tag-${project.data.tags[0].color}`]}
+                  >
+                    {project.data.tags[0].tag}
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="project-content">{project.body}</div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

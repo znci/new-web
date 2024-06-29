@@ -1,0 +1,17 @@
+---
+import DocumentShell from "./DocumentShell.astro";
+import "../styles/main.css";
+
+const { title } = Astro.props;
+---
+
+<DocumentShell {title}>
+  <Fragment slot="head">
+    <script
+      src="https://kit.fontawesome.com/efda69f858.js"
+      crossorigin="anonymous"
+      is:inline></script>
+  </Fragment>
+
+  <slot />
+</DocumentShell>

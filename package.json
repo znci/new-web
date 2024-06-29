@@ -1,15 +1,27 @@
 {
   "name": "new-web",
-  "version": "1.0.0",
-  "description": "- znci.dev source - Here be dragons.",
-  "main": "index.js",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "haunted": "^5.0.0"
+    "@astrojs/check": "^0.7.0",
+    "@astrojs/cloudflare": "^11.0.1",
+    "@astrojs/solid-js": "^4.2.0",
+    "@builder.io/qwik": "^1.5.5",
+    "@qwikdev/astro": "^0.5.15",
+    "astro": "^4.9.2",
+    "solid-js": "^1.8.17",
+    "typescript": "^5.4.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.0",
+    "prettier-plugin-svelte": "^3.2.3"
   }
 }

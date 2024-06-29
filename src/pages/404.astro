@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+import DocumentShell from "../layouts/DocumentShell.astro";
+---
+
+<DocumentShell title="404">
+  <Image
+    src="https://http.cat/images/404.jpg"
+    alt="404 not found"
+    width={591}
+    height={472}
+  />
+</DocumentShell>
+
+<style>
+  body {
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+</style>
