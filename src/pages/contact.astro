@@ -28,7 +28,7 @@ if (Astro.request.method === "POST") {
           embeds: [
             {
               title: "Form Submission",
-              description: "There was a new submission on znci.dev.",
+              description: `There was a new submission on znci.dev from ${Astro.clientAddress}.`,
               color: null,
               fields: [
                 {
