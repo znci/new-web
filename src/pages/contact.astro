@@ -5,80 +5,82 @@ import DocumentShell from "../layouts/DocumentShell.astro";
 
 export const prerender = false;
 
+if (Astro.request.method !== "POST") {
+  return Astro.redirect("/");
+}
+
 let result;
 
-if (Astro.request.method === "POST") {
+try {
+  const data = z
+    .object({
+      name: z.string().min(3).max(128),
+      email: z.string().email().min(6).max(128),
+      message: z.string().min(32).max(1024),
+      hp: z.string().max(0),
+    })
+    .parse(Object.fromEntries(await Astro.request.formData()));
+
   try {
-    const data = z
-      .object({
-        name: z.string().min(3).max(128),
-        email: z.string().email().min(6).max(128),
-        message: z.string().min(32).max(1024),
-        hp: z.string().max(0),
-      })
-      .parse(Object.fromEntries(await Astro.request.formData()));
-
-    try {
-      await fetch(getSecret("WEBHOOK_URL")!, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          content: null,
-          embeds: [
-            {
-              title: "Form Submission",
-              description: `There was a new submission on znci.dev.`,
-              color: null,
-              fields: [
-                {
-                  name: "Name",
-                  value: data.name,
-                  inline: true,
-                },
-                {
-                  name: "Email",
-                  value: data.email,
-                  inline: true,
-                },
-                {
-                  name: "Message",
-                  value: data.message,
-                },
-              ],
-              author: {
-                name: data.name,
+    await fetch(getSecret("WEBHOOK_URL")!, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        content: null,
+        embeds: [
+          {
+            title: "Form Submission",
+            description: `There was a new submission on znci.dev.`,
+            color: null,
+            fields: [
+              {
+                name: "Name",
+                value: data.name,
+                inline: true,
               },
-              footer: {
-                text: Astro.clientAddress,
+              {
+                name: "Email",
+                value: data.email,
+                inline: true,
               },
-              timestamp: new Date().toISOString(),
+              {
+                name: "Message",
+                value: data.message,
+              },
+            ],
+            author: {
+              name: data.name,
             },
-          ],
-          attachments: [],
-        }),
-      });
+            footer: {
+              text: Astro.clientAddress,
+            },
+            timestamp: new Date().toISOString(),
+          },
+        ],
+        attachments: [],
+      }),
+    });
 
-      result = {
-        success: true,
-      };
-    } catch (e) {
-      console.error("An error occurred while sending the form submission.", e);
-
-      result = {
-        success: false,
-        message: "The form submission failed. Please try again later.",
-      };
-    }
+    result = {
+      success: true,
+    };
   } catch (e) {
-    console.error("Invalid data was submitted to the form.", e);
+    console.error("An error occurred while sending the form submission.", e);
 
     result = {
       success: false,
-      message: "Invalid data was submitted to the form.",
+      message: "The form submission failed. Please try again later.",
     };
   }
+} catch (e) {
+  console.error("Invalid data was submitted to the form.", e);
+
+  result = {
+    success: false,
+    message: "Invalid data was submitted to the form.",
+  };
 }
 ---
 
