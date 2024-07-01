@@ -14,6 +14,7 @@ if (Astro.request.method === "POST") {
         name: z.string().min(3).max(128),
         email: z.string().email().min(6).max(128),
         message: z.string().min(32).max(1024),
+        hp: z.string().max(0),
       })
       .parse(Object.fromEntries(await Astro.request.formData()));
 
@@ -28,7 +29,7 @@ if (Astro.request.method === "POST") {
           embeds: [
             {
               title: "Form Submission",
-              description: "There was a new submission on znci.dev.",
+              description: `There was a new submission on znci.dev.`,
               color: null,
               fields: [
                 {
@@ -49,6 +50,10 @@ if (Astro.request.method === "POST") {
               author: {
                 name: data.name,
               },
+              footer: {
+                text: Astro.clientAddress,
+              },
+              timestamp: new Date().toISOString(),
             },
           ],
           attachments: [],
