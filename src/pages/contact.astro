@@ -15,62 +15,82 @@ if (Astro.request.method === "POST") {
         email: z.string().email().min(6).max(128),
         message: z.string().min(32).max(1024),
         hp: z.string().max(0),
+        cf_turnstile_response: z.string()
       })
       .parse(Object.fromEntries(await Astro.request.formData()));
+      try {
 
-    try {
-      await fetch(getSecret("WEBHOOK_URL")!, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          content: null,
-          embeds: [
-            {
-              title: "Form Submission",
-              description: `There was a new submission on znci.dev.`,
-              color: null,
-              fields: [
+        let cf_body = new FormData();
+        cf_body.append('secret', getSecret('cf_site_key')!);
+        cf_body.append('response', data.cf_turnstile_response)
+        cf_body.append('remoteip', Astro.clientAddress)
+        await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', 
+        { body: cf_body, 
+          method: "POST" })
+        
+        try {
+          await fetch(getSecret("WEBHOOK_URL")!, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              content: null,
+              embeds: [
                 {
-                  name: "Name",
-                  value: data.name,
-                  inline: true,
-                },
-                {
-                  name: "Email",
-                  value: data.email,
-                  inline: true,
-                },
-                {
-                  name: "Message",
-                  value: data.message,
+                  title: "Form Submission",
+                  description: `There was a new submission on znci.dev.`,
+                  color: null,
+                  fields: [
+                    {
+                      name: "Name",
+                      value: data.name,
+                      inline: true,
+                    },
+                    {
+                      name: "Email",
+                      value: data.email,
+                      inline: true,
+                    },
+                    {
+                      name: "Message",
+                      value: data.message,
+                    },
+                  ],
+                  author: {
+                    name: data.name,
+                  },
+                  footer: {
+                    text: Astro.clientAddress,
+                  },
+                  timestamp: new Date().toISOString(),
                 },
               ],
-              author: {
-                name: data.name,
-              },
-              footer: {
-                text: Astro.clientAddress,
-              },
-              timestamp: new Date().toISOString(),
-            },
-          ],
-          attachments: [],
-        }),
-      });
+              attachments: [],
+            }),
+          });
 
-      result = {
-        success: true,
-      };
-    } catch (e) {
-      console.error("An error occurred while sending the form submission.", e);
+          result = {
+            success: true,
+          };
+        } catch (e) {
+          console.error("An error occurred while sending the form submission.", e);
 
-      result = {
-        success: false,
-        message: "The form submission failed. Please try again later.",
-      };
-    }
+          result = {
+            success: false,
+            message: "The form submission failed. Please try again later.",
+          };
+        }
+
+      } catch (e) {
+        console.error("An error occurred while sending the form submission.", e);
+
+        result = {
+          success: false,
+          message: "Bad captcha.",
+        };
+      }
+
   } catch (e) {
     console.error("Invalid data was submitted to the form.", e);
 
