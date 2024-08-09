@@ -37,7 +37,7 @@ import RSSSection from "../components/RSSSection.astro";
         If you have any questions, concerns, or just want to say hi, feel free
         to contact us!
       </p>
-
+      <div class="cf-turnstile" data-sitekey="yourSitekey" data-callback="javascriptCallback">
       <div class="card centered">
         <div class="card-title">Contact Form</div>
         <div class="card-content">
@@ -77,11 +77,13 @@ import RSSSection from "../components/RSSSection.astro";
             </div>
             <input name="hp" type="text" class="hp" />
             <div class="form-row">
+              <div class="cf-turnstile" style="display: flex; justify-content: center;" data-response-field-name="cf_turnstile_response" data-sitekey="0x4AAAAAAAg3JDHasIs4kSb3"></div>
               <input type="submit" value="Send" />
             </div>
           </form>
         </div>
       </div>
+    </div>
     </div>
   </section>
 
